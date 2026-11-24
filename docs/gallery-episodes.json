@@ -3,49 +3,117 @@
     "level": "I",
     "case": "spatial-0",
     "state": 0,
-    "name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate"
+    "name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+    "settling_steps": 20,
+    "waypoints": [
+      "Start",
+      "akita_black_bowl_1",
+      "plate_1"
+    ]
   },
   {
     "level": "I",
     "case": "spatial-1",
     "state": 0,
-    "name": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate"
+    "name": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate",
+    "settling_steps": 20,
+    "waypoints": [
+      "Start",
+      "akita_black_bowl_1",
+      "plate_1"
+    ]
   },
   {
     "level": "I",
     "case": "spatial-2",
     "state": 0,
-    "name": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate"
+    "name": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate",
+    "settling_steps": 20,
+    "waypoints": [
+      "Start",
+      "akita_black_bowl_1",
+      "plate_1"
+    ]
   },
   {
     "level": "I",
     "case": "spatial-3",
     "state": 0,
-    "name": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate"
+    "name": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate",
+    "settling_steps": 20,
+    "waypoints": [
+      "Start",
+      "akita_black_bowl_1",
+      "plate_1"
+    ]
   },
   {
     "level": "II",
     "case": "spatial-0",
-    "state": 16,
-    "name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate"
+    "state": 0,
+    "name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+    "settling_steps": 20,
+    "waypoints": [
+      "Start",
+      "akita_black_bowl_1",
+      "plate_1"
+    ],
+    "projected_obstacle_chord_px": 114,
+    "view_azimuth_elevation_deg": [
+      -40,
+      50
+    ]
   },
   {
     "level": "II",
     "case": "spatial-1",
-    "state": 16,
-    "name": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate"
+    "state": 0,
+    "name": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate",
+    "settling_steps": 20,
+    "waypoints": [
+      "Start",
+      "akita_black_bowl_1",
+      "plate_1"
+    ],
+    "projected_obstacle_chord_px": 73,
+    "view_azimuth_elevation_deg": [
+      -90,
+      50
+    ]
   },
   {
     "level": "II",
     "case": "spatial-2",
-    "state": 16,
-    "name": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate"
+    "state": 0,
+    "name": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate",
+    "settling_steps": 20,
+    "waypoints": [
+      "Start",
+      "akita_black_bowl_1",
+      "plate_1"
+    ],
+    "projected_obstacle_chord_px": 43,
+    "view_azimuth_elevation_deg": [
+      -90,
+      50
+    ]
   },
   {
     "level": "II",
     "case": "spatial-3",
-    "state": 1,
-    "name": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate"
+    "state": 0,
+    "name": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate",
+    "settling_steps": 20,
+    "waypoints": [
+      "Start",
+      "akita_black_bowl_1",
+      "plate_1"
+    ],
+    "projected_obstacle_chord_px": 40,
+    "view_azimuth_elevation_deg": [
+      90,
+      50
+    ]
   },
   {
     "level": "III",
@@ -491,49 +559,111 @@
     "level": "I",
     "case": "goal-0",
     "state": 0,
-    "name": "put_the_bowl_on_the_plate"
+    "name": "put_the_bowl_on_the_plate",
+    "settling_steps": 20,
+    "waypoints": [
+      "Start",
+      "akita_black_bowl_1",
+      "Carry",
+      "plate_1"
+    ]
   },
   {
     "level": "I",
     "case": "goal-2",
     "state": 0,
-    "name": "put_the_bowl_on_the_stove"
+    "name": "put_the_bowl_on_the_stove",
+    "settling_steps": 20,
+    "waypoints": [
+      "Start",
+      "akita_black_bowl_1",
+      "flat_stove_1_cook_region"
+    ]
   },
   {
     "level": "I",
     "case": "goal-1",
     "state": 0,
-    "name": "put_the_bowl_on_top_of_the_cabinet"
+    "name": "put_the_bowl_on_top_of_the_cabinet",
+    "settling_steps": 20,
+    "waypoints": [
+      "Start",
+      "akita_black_bowl_1",
+      "Carry",
+      "wooden_cabinet_1_top_side"
+    ]
   },
   {
     "level": "I",
     "case": "goal-3",
     "state": 0,
-    "name": "open_the_top_drawer_and_put_the_bowl_inside"
+    "name": "open_the_top_drawer_and_put_the_bowl_inside",
+    "settling_steps": 20,
+    "waypoints": [
+      "Start",
+      "Handle",
+      "Open",
+      "akita_black_bowl_1",
+      "wooden_cabinet_1_top_region"
+    ]
   },
   {
     "level": "II",
     "case": "goal-0",
     "state": 0,
-    "name": "put_the_bowl_on_the_plate"
+    "name": "put_the_bowl_on_the_plate",
+    "settling_steps": 20,
+    "waypoints": [
+      "Start",
+      "akita_black_bowl_1",
+      "Carry",
+      "plate_1"
+    ],
+    "projected_obstacle_chord_px": 59
   },
   {
     "level": "II",
     "case": "goal-2",
     "state": 0,
-    "name": "put_the_bowl_on_the_stove"
+    "name": "put_the_bowl_on_the_stove",
+    "settling_steps": 20,
+    "waypoints": [
+      "Start",
+      "akita_black_bowl_1",
+      "flat_stove_1_cook_region"
+    ],
+    "projected_obstacle_chord_px": 58
   },
   {
     "level": "II",
     "case": "goal-1",
     "state": 0,
-    "name": "put_the_bowl_on_top_of_the_cabinet"
+    "name": "put_the_bowl_on_top_of_the_cabinet",
+    "settling_steps": 20,
+    "waypoints": [
+      "Start",
+      "akita_black_bowl_1",
+      "Carry",
+      "wooden_cabinet_1_top_side"
+    ],
+    "projected_obstacle_chord_px": 52,
+    "view_azimuth_elevation_deg": [
+      -40,
+      50
+    ]
   },
   {
     "level": "II",
     "case": "goal-3",
-    "state": 1,
-    "name": "put_the_cream_cheese_in_the_bowl"
+    "state": 0,
+    "name": "put_the_cream_cheese_in_the_bowl",
+    "settling_steps": 20,
+    "waypoints": [
+      "Start",
+      "cream_cheese_1",
+      "akita_black_bowl_1"
+    ],
+    "projected_obstacle_chord_px": 80
   },
   {
     "level": "III",
@@ -834,49 +964,113 @@
     "level": "I",
     "case": "object-3",
     "state": 0,
-    "name": "pick_up_the_bbq_sauce_and_place_it_in_the_basket"
+    "name": "pick_up_the_bbq_sauce_and_place_it_in_the_basket",
+    "settling_steps": 20,
+    "waypoints": [
+      "Start",
+      "bbq_sauce_1",
+      "basket_1_contain_region"
+    ]
   },
   {
     "level": "I",
     "case": "object-1",
     "state": 0,
-    "name": "pick_up_the_chocolate_pudding_and_place_it_in_the_basket"
+    "name": "pick_up_the_chocolate_pudding_and_place_it_in_the_basket",
+    "settling_steps": 20,
+    "waypoints": [
+      "Start",
+      "chocolate_pudding_1",
+      "basket_1_contain_region"
+    ]
   },
   {
     "level": "I",
     "case": "object-2",
     "state": 0,
-    "name": "pick_up_the_milk_and_place_it_in_the_basket"
+    "name": "pick_up_the_milk_and_place_it_in_the_basket",
+    "settling_steps": 20,
+    "waypoints": [
+      "Start",
+      "milk_1",
+      "basket_1_contain_region"
+    ]
   },
   {
     "level": "I",
     "case": "object-0",
     "state": 0,
-    "name": "pick_up_the_orange_juice_and_place_it_in_the_basket"
+    "name": "pick_up_the_orange_juice_and_place_it_in_the_basket",
+    "settling_steps": 20,
+    "waypoints": [
+      "Start",
+      "orange_juice_1",
+      "basket_1_contain_region"
+    ]
   },
   {
     "level": "II",
     "case": "object-3",
     "state": 0,
-    "name": "pick_up_the_bbq_sauce_and_place_it_in_the_basket"
+    "name": "pick_up_the_bbq_sauce_and_place_it_in_the_basket",
+    "settling_steps": 20,
+    "waypoints": [
+      "Start",
+      "bbq_sauce_1",
+      "basket_1_contain_region"
+    ],
+    "projected_obstacle_chord_px": 60,
+    "view_azimuth_elevation_deg": [
+      -40,
+      50
+    ]
   },
   {
     "level": "II",
     "case": "object-1",
     "state": 0,
-    "name": "pick_up_the_chocolate_pudding_and_place_it_in_the_basket"
+    "name": "pick_up_the_chocolate_pudding_and_place_it_in_the_basket",
+    "settling_steps": 20,
+    "waypoints": [
+      "Start",
+      "chocolate_pudding_1",
+      "basket_1_contain_region"
+    ],
+    "projected_obstacle_chord_px": 62,
+    "view_azimuth_elevation_deg": [
+      -40,
+      50
+    ]
   },
   {
     "level": "II",
     "case": "object-2",
     "state": 0,
-    "name": "pick_up_the_milk_and_place_it_in_the_basket"
+    "name": "pick_up_the_milk_and_place_it_in_the_basket",
+    "settling_steps": 20,
+    "waypoints": [
+      "Start",
+      "milk_1",
+      "basket_1_contain_region"
+    ],
+    "projected_obstacle_chord_px": 54
   },
   {
     "level": "II",
     "case": "object-0",
     "state": 0,
-    "name": "pick_up_the_orange_juice_and_place_it_in_the_basket"
+    "name": "pick_up_the_orange_juice_and_place_it_in_the_basket",
+    "settling_steps": 20,
+    "waypoints": [
+      "Start",
+      "orange_juice_1",
+      "basket_1_contain_region"
+    ],
+    "projected_obstacle_chord_px": 112,
+    "view_azimuth_elevation_deg": [
+      90,
+      50
+    ]
   },
   {
     "level": "III",
@@ -1101,49 +1295,125 @@
     "level": "I",
     "case": "long-0",
     "state": 0,
-    "name": "LIVING_ROOM_SCENE1_put_both_the_alphabet_soup_and_the_cream_cheese_box_in_the_basket"
+    "name": "LIVING_ROOM_SCENE1_put_both_the_alphabet_soup_and_the_cream_cheese_box_in_the_basket",
+    "settling_steps": 20,
+    "waypoints": [
+      "Start",
+      "alphabet_soup_1",
+      "basket_1_contain_region",
+      "cream_cheese_1",
+      "basket_1_contain_region"
+    ]
   },
   {
     "level": "I",
     "case": "long-1",
     "state": 0,
-    "name": "LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket"
+    "name": "LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket",
+    "settling_steps": 20,
+    "waypoints": [
+      "Start",
+      "alphabet_soup_1",
+      "basket_1_contain_region",
+      "tomato_sauce_1",
+      "basket_1_contain_region"
+    ]
   },
   {
     "level": "I",
     "case": "long-2",
     "state": 0,
-    "name": "LIVING_ROOM_SCENE5_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate"
+    "name": "LIVING_ROOM_SCENE5_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate",
+    "settling_steps": 20,
+    "waypoints": [
+      "Start",
+      "porcelain_mug_1",
+      "plate_1",
+      "white_yellow_mug_1",
+      "plate_2"
+    ]
   },
   {
     "level": "I",
     "case": "long-3",
     "state": 0,
-    "name": "LIVING_ROOM_SCENE6_put_the_white_mug_on_the_plate_and_put_the_chocolate_pudding_to_the_right_of_the_plate"
+    "name": "LIVING_ROOM_SCENE6_put_the_white_mug_on_the_plate_and_put_the_chocolate_pudding_to_the_right_of_the_plate",
+    "settling_steps": 20,
+    "waypoints": [
+      "Start",
+      "porcelain_mug_1",
+      "plate_1",
+      "chocolate_pudding_1",
+      "living_room_table_plate_right_region"
+    ]
   },
   {
     "level": "II",
     "case": "long-0",
     "state": 0,
-    "name": "LIVING_ROOM_SCENE1_put_both_the_alphabet_soup_and_the_cream_cheese_box_in_the_basket"
+    "name": "LIVING_ROOM_SCENE1_put_both_the_alphabet_soup_and_the_cream_cheese_box_in_the_basket",
+    "settling_steps": 20,
+    "waypoints": [
+      "Start",
+      "alphabet_soup_1",
+      "basket_1_contain_region",
+      "cream_cheese_1",
+      "basket_1_contain_region"
+    ],
+    "projected_obstacle_chord_px": 48
   },
   {
     "level": "II",
     "case": "long-1",
     "state": 0,
-    "name": "LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket"
+    "name": "LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket",
+    "settling_steps": 20,
+    "waypoints": [
+      "Start",
+      "alphabet_soup_1",
+      "basket_1_contain_region",
+      "tomato_sauce_1",
+      "basket_1_contain_region"
+    ],
+    "projected_obstacle_chord_px": 47
   },
   {
     "level": "II",
     "case": "long-2",
     "state": 0,
-    "name": "LIVING_ROOM_SCENE5_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate"
+    "name": "LIVING_ROOM_SCENE5_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate",
+    "settling_steps": 20,
+    "waypoints": [
+      "Start",
+      "porcelain_mug_1",
+      "plate_1",
+      "white_yellow_mug_1",
+      "plate_2"
+    ],
+    "projected_obstacle_chord_px": 60,
+    "view_azimuth_elevation_deg": [
+      145,
+      50
+    ]
   },
   {
     "level": "II",
     "case": "long-3",
     "state": 0,
-    "name": "LIVING_ROOM_SCENE6_put_the_white_mug_on_the_plate_and_put_the_chocolate_pudding_to_the_right_of_the_plate"
+    "name": "LIVING_ROOM_SCENE6_put_the_white_mug_on_the_plate_and_put_the_chocolate_pudding_to_the_right_of_the_plate",
+    "settling_steps": 20,
+    "waypoints": [
+      "Start",
+      "porcelain_mug_1",
+      "plate_1",
+      "chocolate_pudding_1",
+      "living_room_table_plate_right_region"
+    ],
+    "projected_obstacle_chord_px": 42,
+    "view_azimuth_elevation_deg": [
+      90,
+      50
+    ]
   },
   {
     "level": "III",

@@ -46,6 +46,7 @@ class SceneRegions:
         valid = (seg[:,:,0] == mujoco.mjtObj.mjOBJ_GEOM) & (seg[:,:,1] >= 0)
         roles = np.zeros((size,size), np.uint8)
         roles[valid] = self.roles[seg[:,:,1][valid]]
+        self.obstacle_mask = roles == 2
         image = Image.fromarray(rgb)
         colors = [(76,190,255), (255,132,63)]
         for role,color in enumerate(colors, 1):
