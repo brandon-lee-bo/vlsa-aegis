@@ -42,6 +42,7 @@ class ControlEnv:
         safety_level="I",
         obstacle_speed_mps=0.10,
         obstacle_start_s=0.60,
+        cross_task_path=False,
         **kwargs,
     ):
         assert os.path.exists(
@@ -49,6 +50,7 @@ class ControlEnv:
         ), f"[error] {bddl_file_name} does not exist!"
 
         self.safety_level = safety_level
+        self.cross_task_path = cross_task_path
         self.obstacle_speed_mps = obstacle_speed_mps
         self.obstacle_start_s = obstacle_start_s
 
@@ -149,7 +151,7 @@ class ControlEnv:
             self.set_state(init_state)
             self.sim.forward()
             self.env.level_three_motion = LinearObstacle(
-                self.env, self.obstacle_speed_mps, self.obstacle_start_s
+                self.env, self.obstacle_speed_mps, self.obstacle_start_s, self.cross_task_path
             )
             self.env.level_three_motion.apply(self.sim)
             self.check_success()

@@ -9,11 +9,11 @@ This R³ extension starts from SafeLIBERO Level I. Each of the 16 tasks keeps it
 After installing the upstream SafeLIBERO simulation dependencies and setting the LIBERO asset paths, run from the repository root. The preview uses Pillow, MuJoCo 3 (tested with 3.2.3), and the original init-state files. For PyTorch 2.6+ the upstream loader may require `TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD=1` for those trusted files.
 
 ```sh
-python examples/preview_level_iii.py --suite spatial --task 0 --state 0 \
+python examples/preview_level_iii.py --suite spatial --task 0 --cross-task-path \
     --speed 0.10 --delay 0.60 --output spatial.gif
 ```
 
-Speed is in metres per second and delay is in simulated seconds. Use speed 0 for a stationary obstacle at the same start. The preview applies a zero-motion command, renders at 10 frames/s and writes the obstacle, waypoints and measured position error to a JSON file beside the GIF. The yellow ring marks the obstacle.
+Speed is in metres per second and delay is in simulated seconds. Use speed 0 for a stationary obstacle at the same start. The preview applies a zero-motion command, renders at 10 frames/s and writes the obstacle, waypoints and measured position error to a JSON file beside the GIF. In crossing mode, yellow dashes connect the initial gripper pose, each pickup and its placement in instruction order. The drawer task includes reaching and opening the drawer. Two short bowl transfers include a lateral carry waypoint. The cyan line follows a point on the moving obstacle. A yellow ring appears on frames where its collision geometry intersects the indicated 3D segment. These are illustrative routes with a stationary arm. A policy may execute a different trajectory.
 
 ## Use with a policy
 
@@ -23,4 +23,4 @@ The generator uses collision bounds to select a supported, initially clear lane 
 
 ## Coverage
 
-All 800 supplied Level I initial states produced a route. For each state we tested five positions along the lane against the initial scene at a 1 mm penetration threshold. For the first state of each task we also checked that changing the speed and delay preserved the endpoints. The web gallery shows state 0 for each task at 0.10 and 0.20 m/s.
+All 800 supplied Level I initial states produced a route. For each state we tested five positions along the lane against the initial scene at a 1 mm penetration threshold. For the first state of each task we also checked that changing the speed and delay preserved the endpoints. That audit covers the default lane generator. For each gallery task, the crossing preset searches the supplied initial states for a clear transverse lane. Both speeds use the same state, obstacle lane and task route. See the [16 gallery cases](level-iii-gallery.json) for exact indices, world coordinates and crossing frames at 10 fps. To use a gallery case with a policy, pass `cross_task_path=True` to the environment and restore its listed state. Other initial states can lack a feasible lane for this preset.

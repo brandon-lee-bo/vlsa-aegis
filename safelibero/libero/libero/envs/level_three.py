@@ -13,7 +13,7 @@ def _bounds(model, data, geom):
     return mid - extent, mid + extent
 
 
-def _route(domain, name):
+def _route(domain, name, path=None):
     sim = domain.sim
     m, d = sim.model._model, sim.data._data
     body = sim.model.body_name2id(domain.objects_dict[name].root_body)
@@ -64,6 +64,12 @@ def _route(domain, name):
         if not valid.any():
             continue
         candidates = starts[valid]
+        if path is not None:
+            from .task_path import crossing_lane
+            lane = crossing_lane(candidates, vector, z, origin, lower, upper, path, m, d, own)
+            if lane is not None and (best is None or lane[0] < best[0]):
+                best = lane
+            continue
         cost = np.linalg.norm(candidates - origin[:2], axis=1)
         cost += .35 * np.linalg.norm(candidates + vector - np.array([-.08, 0.]), axis=1)
         i = cost.argmin()
@@ -71,11 +77,11 @@ def _route(domain, name):
             best = cost[i], np.r_[candidates[i], z], np.r_[vector, 0.]
     if best is None:
         raise ValueError('No clear 16 cm obstacle lane for this initial state')
-    return best[1], best[2], body
+    return best[1], best[2], body, own, best[3] if path is not None else None
 
 
 class LinearObstacle:
-    def __init__(self, domain, speed, delay):
+    def __init__(self, domain, speed, delay, cross_task_path=False):
         if not np.isfinite([speed, delay]).all() or min(speed, delay) < 0:
             raise ValueError('Speed and start delay must be finite and non-negative')
         sim = domain.sim
@@ -89,7 +95,11 @@ class LinearObstacle:
         if not candidates:
             raise ValueError('No active obstacle in this Level I state')
         self.name = sorted(candidates)[0]
-        self.start, self.delta, body = _route(domain, self.name)
+        self.labels, self.path = [], None
+        if cross_task_path:
+            from .task_path import task_waypoints
+            self.labels, self.path = task_waypoints(domain)
+        self.start, self.delta, body, self.geoms, self.segment = _route(domain, self.name, self.path)
         m, d = sim.model._model, sim.data._data
         joint = m.body_jntadr[body]
         if joint < 0 or m.jnt_type[joint] != mujoco.mjtJoint.mjJNT_FREE:
