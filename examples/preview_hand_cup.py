@@ -7,25 +7,26 @@ import numpy as np
 from PIL import Image, ImageDraw
 from robosuite.utils.camera_utils import get_camera_transform_matrix
 from libero.libero import benchmark
-from libero.libero.envs import OffScreenRenderEnv
 from libero.libero.envs.task_path import segment_hit
+from scene_regions import SceneRegions, make_preview_env
 from preview_level_iii import project, dashed
 
 
-def render(speed, output):
-    suite = benchmark.get_benchmark_dict()['safelibero_spatial'](safety_level='III')
-    env = OffScreenRenderEnv(bddl_file_name=suite.get_task_bddl_file_path(0), safety_level='III',
+def render(speed, output, suite_name, task, state):
+    suite = benchmark.get_benchmark_dict()['safelibero_'+suite_name](safety_level='III')
+    env = make_preview_env(bddl_file_name=suite.get_task_bddl_file_path(task), safety_level='III',
                              hand_places_cup=True, obstacle_speed_mps=speed,
                              obstacle_start_s=.4, use_camera_obs=False, hard_reset=False)
     try:
         env.seed(13)
         env.reset()
-        env.set_init_state(suite.get_task_init_states(0)[4])
+        env.set_init_state(suite.get_task_init_states(task)[state])
         sim=env.sim
         m,d=sim.model._model,sim.data._data
         motion=env.env.level_three_motion
         proj=get_camera_transform_matrix(sim,'agentview',400,400)
         uv=[project(proj,pt) for pt in motion.path]
+        regions = SceneRegions(env)
         frames,hits,settled=[],[],[]
         drift={}
         bodies={n:b for n,b in env.env.obj_body_id.items() if n in env.env.objects_dict and 'obstacle' not in n and n != 'box_base_1'}
@@ -37,7 +38,7 @@ def render(speed, output):
             for n,b in bodies.items():
                 excursion[n]=max(excursion[n],float(np.linalg.norm(d.xpos[b]-init[n])))
             if step%2==0:
-                img=Image.fromarray(sim.render(width=400,height=400,camera_name='agentview')[::-1].copy())
+                img=regions.frame(400)
                 draw=ImageDraw.Draw(img)
                 for a,b in zip(uv,uv[1:]):
                     dashed(draw,a,b)
@@ -62,7 +63,8 @@ def render(speed, output):
         for n,b in bodies.items():
             drift[n]=float(np.linalg.norm(d.xpos[b]-init[n]))
         final=d.xpos[motion.cup].copy()
-        report=dict(state=4,task='spatial-0',speed_mps=speed,release_s=motion.release_s,phase_frames=stages,
+        assert min(regions.seen)>0
+        report=dict(visible_pixels_max=regions.seen.tolist(),state=state,task=f'{suite_name}-{task}',speed_mps=speed,release_s=motion.release_s,phase_frames=stages,
                     hand_crossing_frames=hits,frames=len(frames),cup_drop_xyz=motion.drop.tolist(),
                     cup_final_xyz=final.tolist(),cup_drop_error_m=float(np.linalg.norm(final-motion.drop)),
                     settled_drift_m=float(np.linalg.norm(np.array(settled)-final,axis=1).max()),
@@ -90,7 +92,10 @@ def render(speed, output):
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
+    p.add_argument('--suite',choices=['spatial','goal'],default='spatial')
+    p.add_argument('--task',type=int,default=0)
+    p.add_argument('--state',type=int,default=4)
     p.add_argument('--speed',type=float,default=.20)
     p.add_argument('--output',required=True,type=Path)
     args=p.parse_args()
-    render(args.speed,args.output)
+    render(args.speed,args.output,args.suite,args.task,args.state)

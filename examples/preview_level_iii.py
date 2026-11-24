@@ -4,11 +4,11 @@ import json
 from pathlib import Path
 
 import numpy as np
+from scene_regions import SceneRegions, make_preview_env
 from robosuite.utils.camera_utils import get_camera_transform_matrix
 from PIL import Image, ImageDraw
 from libero.libero.envs.task_path import segment_hit
 from libero.libero import benchmark
-from libero.libero.envs import OffScreenRenderEnv
 
 
 def project(matrix, xyz):
@@ -29,7 +29,7 @@ def dashed(draw, a, b):
 
 def render(suite_name, task_id, index, speed, delay, output, crossing=False):
     suite = benchmark.get_benchmark_dict()['safelibero_' + suite_name](safety_level='III')
-    env = OffScreenRenderEnv(bddl_file_name=suite.get_task_bddl_file_path(task_id),
+    env = make_preview_env(bddl_file_name=suite.get_task_bddl_file_path(task_id),
                              safety_level='III', obstacle_speed_mps=speed, cross_task_path=crossing,
                              obstacle_start_s=delay, use_camera_obs=False,
                              camera_names=['agentview'], camera_heights=320, camera_widths=320,
@@ -80,17 +80,18 @@ def render(suite_name, task_id, index, speed, delay, output, crossing=False):
             projection = get_camera_transform_matrix(env.sim, 'agentview', 320, 320)
             uv = [project(projection, p) for p in motion.path]
             lane_uv = [tuple(project(projection, p)) for p in ends]
+        regions = SceneRegions(env)
         frames, errors, hits = [], [], []
         # A static control uses the same viewing duration as the default motion.
         duration = delay + motion.length / (speed or .10) + .5
+        stride = 1 if speed >= .40 else 2
         for step in range(int(np.ceil(duration * 20)) + 1):
             elapsed = env.sim.data.time - motion.t0
             travel = min(motion.length, max(0., elapsed - delay) * speed)
             expected = motion.start + motion.delta * travel / motion.length
             errors.append(np.linalg.norm(env.sim.data.body_xpos[body] - expected))
-            if step % 2 == 0:
-                pixels = env.sim.render(width=320, height=320, camera_name='agentview')[::-1]
-                frame = Image.fromarray(pixels.copy())
+            if step % stride == 0:
+                frame = regions.frame(320)
                 draw = ImageDraw.Draw(frame)
                 if crossing:
                     draw.line(lane_uv, fill='#22494a', width=3)
@@ -129,11 +130,15 @@ def render(suite_name, task_id, index, speed, delay, output, crossing=False):
         palette = sample.quantize(colors=256)
         indexed = [f.quantize(palette=palette, dither=Image.Dither.NONE) for f in frames]
         indexed[0].save(output, save_all=True, append_images=indexed[1:],
-                        duration=100, loop=0, optimize=False)
+                        duration=50 * stride, loop=0, optimize=False)
         meta = dict(suite=suite_name, task=task_id, state=index, hazard=motion.name,
-                    speed_mps=speed, delay_s=delay, start_xyz=motion.start.tolist(),
+                    speed_mps=speed, frame_ms=50*stride, delay_s=delay, start_xyz=motion.start.tolist(),
                     end_xyz=(motion.start + motion.delta).tolist(),
                     max_position_error_m=float(max(errors)), frames=len(frames))
+        assert min(regions.seen) > 0, 'Missing target or obstacle pixels'
+        meta['visible_pixels_max'] = regions.seen.tolist()
+        frames[0].save(output.with_name(output.stem+'-motion.webp'),save_all=True,
+                       append_images=frames[1:],duration=50*stride,loop=0,quality=85,method=2)
         if crossing:
             if speed and (not hits or hits[0] == 0 or hits[-1] == len(frames)-1):
                 raise ValueError('Expected clear, crossing, clear in the rendered frames')

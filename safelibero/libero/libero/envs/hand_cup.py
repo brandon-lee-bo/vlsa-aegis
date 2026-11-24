@@ -53,6 +53,9 @@ class HandPlacesCup:
             raise ValueError('Hand preview requires positive speed and nonnegative delay')
         self.sim = sim = domain.sim
         m,d = sim.model._model, sim.data._data
+        goals = domain.parsed_problem['goal_state']
+        if len(goals) != 1 or goals[0][2] != 'plate_1':
+            raise ValueError('This reach-and-place event needs a single plate destination')
         self.cup = domain.obj_body_id['red_coffee_mug_obstacle_1']
         joint = m.body_jntadr[self.cup]
         self.qa, self.va = m.jnt_qposadr[joint], m.jnt_dofadr[joint]

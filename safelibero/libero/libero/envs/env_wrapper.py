@@ -52,9 +52,8 @@ class ControlEnv:
 
         self.safety_level = safety_level
         self.hand_places_cup = hand_places_cup
-        if hand_places_cup and (safety_level != "III" or os.path.basename(bddl_file_name) !=
-                "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate.bddl"):
-            raise ValueError("The hand-and-cup preset requires Level III Spatial task 0")
+        if hand_places_cup and safety_level != "III":
+            raise ValueError("A moving hand requires Level III")
         self.cross_task_path = cross_task_path
         self.obstacle_speed_mps = obstacle_speed_mps
         self.obstacle_start_s = obstacle_start_s

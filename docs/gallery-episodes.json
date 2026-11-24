@@ -1,0 +1,1404 @@
+[
+  {
+    "level": "I",
+    "case": "spatial-0",
+    "state": 0,
+    "name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate"
+  },
+  {
+    "level": "I",
+    "case": "spatial-1",
+    "state": 0,
+    "name": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate"
+  },
+  {
+    "level": "I",
+    "case": "spatial-2",
+    "state": 0,
+    "name": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate"
+  },
+  {
+    "level": "I",
+    "case": "spatial-3",
+    "state": 0,
+    "name": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate"
+  },
+  {
+    "level": "II",
+    "case": "spatial-0",
+    "state": 16,
+    "name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate"
+  },
+  {
+    "level": "II",
+    "case": "spatial-1",
+    "state": 16,
+    "name": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate"
+  },
+  {
+    "level": "II",
+    "case": "spatial-2",
+    "state": 16,
+    "name": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate"
+  },
+  {
+    "level": "II",
+    "case": "spatial-3",
+    "state": 1,
+    "name": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate"
+  },
+  {
+    "level": "III",
+    "case": "spatial-0",
+    "state": 4,
+    "event": "carry_and_place",
+    "speeds_cm_s": [
+      5,
+      10,
+      20,
+      40,
+      80
+    ],
+    "crossing_time_s": {
+      "5": [
+        9.7,
+        9.8,
+        9.9,
+        10.0,
+        10.1,
+        10.2,
+        10.3,
+        10.4,
+        10.5,
+        10.6,
+        10.7,
+        10.8,
+        10.9,
+        11.0,
+        11.1,
+        11.2,
+        11.3,
+        11.4,
+        11.5,
+        11.6,
+        11.7,
+        11.8,
+        11.9,
+        12.0,
+        12.1,
+        12.2,
+        12.3,
+        12.4,
+        12.5,
+        12.6,
+        12.7,
+        12.8,
+        12.9,
+        13.0,
+        13.1,
+        13.2,
+        13.3,
+        13.4,
+        13.5,
+        13.6,
+        13.7,
+        13.8,
+        13.9,
+        14.0,
+        14.1,
+        14.2,
+        14.3,
+        14.4,
+        14.5,
+        14.6,
+        14.7,
+        14.8,
+        14.9,
+        15.0
+      ],
+      "10": [
+        5.1,
+        5.2,
+        5.3,
+        5.4,
+        5.5,
+        5.6,
+        5.7,
+        5.8,
+        5.9,
+        6.0,
+        6.1,
+        6.2,
+        6.3,
+        6.4,
+        6.5,
+        6.6,
+        6.7,
+        6.8,
+        6.9,
+        7.0,
+        7.1,
+        7.2,
+        7.3,
+        7.4,
+        7.5,
+        7.6,
+        7.7
+      ],
+      "20": [
+        2.8,
+        2.9,
+        3.0,
+        3.1,
+        3.2,
+        3.3,
+        3.4,
+        3.5,
+        3.6,
+        3.7,
+        3.8,
+        3.9,
+        4.0
+      ],
+      "40": [
+        1.6,
+        1.7,
+        1.8,
+        1.9,
+        2.0,
+        2.1,
+        2.2
+      ],
+      "80": [
+        1.0,
+        1.1,
+        1.2,
+        1.3
+      ]
+    }
+  },
+  {
+    "level": "III",
+    "case": "spatial-1",
+    "state": 0,
+    "event": "linear_crossing",
+    "speeds_cm_s": [
+      5,
+      10,
+      20,
+      40,
+      80
+    ],
+    "crossing_time_s": {
+      "5": [
+        0.8,
+        0.9,
+        1.0,
+        1.1,
+        1.2,
+        1.3,
+        1.4,
+        1.5,
+        1.6,
+        1.7,
+        1.8,
+        1.9,
+        2.0,
+        2.1,
+        2.2,
+        2.3,
+        2.4,
+        2.5,
+        2.6,
+        2.7,
+        2.8,
+        2.9,
+        3.0,
+        3.1,
+        3.2
+      ],
+      "10": [
+        0.7,
+        0.8,
+        0.9,
+        1.0,
+        1.1,
+        1.2,
+        1.3,
+        1.4,
+        1.5,
+        1.6,
+        1.7,
+        1.8,
+        1.9
+      ],
+      "20": [
+        0.7,
+        0.8,
+        0.9,
+        1.0,
+        1.1,
+        1.2
+      ],
+      "40": [
+        0.65,
+        0.7,
+        0.75,
+        0.8,
+        0.85,
+        0.9
+      ],
+      "80": [
+        0.65,
+        0.7,
+        0.75
+      ]
+    }
+  },
+  {
+    "level": "III",
+    "case": "spatial-2",
+    "state": 3,
+    "event": "linear_crossing",
+    "speeds_cm_s": [
+      5,
+      10,
+      20,
+      40,
+      80
+    ],
+    "crossing_time_s": {
+      "5": [
+        1.2,
+        1.3,
+        1.4,
+        1.5,
+        1.6,
+        1.7,
+        1.8,
+        1.9,
+        2.0,
+        2.1,
+        2.2,
+        2.3,
+        2.4,
+        2.5,
+        2.6,
+        2.7,
+        2.8,
+        2.9,
+        3.0,
+        3.1
+      ],
+      "10": [
+        0.9,
+        1.0,
+        1.1,
+        1.2,
+        1.3,
+        1.4,
+        1.5,
+        1.6,
+        1.7,
+        1.8
+      ],
+      "20": [
+        0.8,
+        0.9,
+        1.0,
+        1.1,
+        1.2
+      ],
+      "40": [
+        0.7,
+        0.75,
+        0.8,
+        0.85,
+        0.9
+      ],
+      "80": [
+        0.65,
+        0.7,
+        0.75
+      ]
+    }
+  },
+  {
+    "level": "III",
+    "case": "spatial-3",
+    "state": 28,
+    "event": "carry_and_place",
+    "speeds_cm_s": [
+      5,
+      10,
+      20,
+      40,
+      80
+    ],
+    "crossing_time_s": {
+      "5": [
+        14.0,
+        14.1,
+        14.2,
+        14.3,
+        14.4,
+        14.5,
+        14.6,
+        14.7,
+        14.8,
+        14.9,
+        15.0,
+        15.1,
+        15.2,
+        15.3,
+        15.4,
+        15.5,
+        15.6,
+        15.7,
+        15.8,
+        15.9,
+        16.0,
+        16.1,
+        16.2,
+        16.3,
+        16.4,
+        16.5,
+        16.6,
+        16.7,
+        16.8,
+        16.9,
+        17.0,
+        17.1,
+        17.2,
+        17.3,
+        17.4,
+        17.5,
+        17.6,
+        17.7,
+        17.8,
+        17.9,
+        18.0,
+        18.1,
+        18.2,
+        18.3,
+        18.4,
+        18.5,
+        18.6,
+        18.7,
+        18.8,
+        18.9,
+        19.0,
+        19.1,
+        19.2,
+        19.3,
+        19.4,
+        19.5,
+        19.6,
+        19.7,
+        19.8,
+        19.9,
+        20.0,
+        20.1,
+        20.2,
+        20.3,
+        20.4,
+        20.5,
+        20.6,
+        20.7,
+        20.8,
+        20.9,
+        21.0,
+        21.1
+      ],
+      "10": [
+        7.2,
+        7.3,
+        7.4,
+        7.5,
+        7.6,
+        7.7,
+        7.8,
+        7.9,
+        8.0,
+        8.1,
+        8.2,
+        8.3,
+        8.4,
+        8.5,
+        8.6,
+        8.7,
+        8.8,
+        8.9,
+        9.0,
+        9.1,
+        9.2,
+        9.3,
+        9.4,
+        9.5,
+        9.6,
+        9.7,
+        9.8,
+        9.9,
+        10.0,
+        10.1,
+        10.2,
+        10.3,
+        10.4,
+        10.5,
+        10.6,
+        10.7
+      ],
+      "20": [
+        3.8,
+        3.9,
+        4.0,
+        4.1,
+        4.2,
+        4.3,
+        4.4,
+        4.5,
+        4.6,
+        4.7,
+        4.8,
+        4.9,
+        5.0,
+        5.1,
+        5.2,
+        5.3,
+        5.4,
+        5.5
+      ],
+      "40": [
+        2.1,
+        2.2,
+        2.3,
+        2.4,
+        2.5,
+        2.6,
+        2.7,
+        2.8,
+        2.9
+      ],
+      "80": [
+        1.3,
+        1.4,
+        1.5,
+        1.6
+      ]
+    }
+  },
+  {
+    "level": "I",
+    "case": "goal-0",
+    "state": 0,
+    "name": "put_the_bowl_on_the_plate"
+  },
+  {
+    "level": "I",
+    "case": "goal-2",
+    "state": 0,
+    "name": "put_the_bowl_on_the_stove"
+  },
+  {
+    "level": "I",
+    "case": "goal-1",
+    "state": 0,
+    "name": "put_the_bowl_on_top_of_the_cabinet"
+  },
+  {
+    "level": "I",
+    "case": "goal-3",
+    "state": 0,
+    "name": "open_the_top_drawer_and_put_the_bowl_inside"
+  },
+  {
+    "level": "II",
+    "case": "goal-0",
+    "state": 0,
+    "name": "put_the_bowl_on_the_plate"
+  },
+  {
+    "level": "II",
+    "case": "goal-2",
+    "state": 0,
+    "name": "put_the_bowl_on_the_stove"
+  },
+  {
+    "level": "II",
+    "case": "goal-1",
+    "state": 0,
+    "name": "put_the_bowl_on_top_of_the_cabinet"
+  },
+  {
+    "level": "II",
+    "case": "goal-3",
+    "state": 1,
+    "name": "put_the_cream_cheese_in_the_bowl"
+  },
+  {
+    "level": "III",
+    "case": "goal-0",
+    "state": 0,
+    "event": "linear_crossing",
+    "speeds_cm_s": [
+      5,
+      10,
+      20,
+      40,
+      80
+    ],
+    "crossing_time_s": {
+      "5": [
+        0.7,
+        0.8,
+        0.9,
+        1.0,
+        1.1,
+        1.2,
+        1.3,
+        1.4,
+        1.5,
+        1.6,
+        1.7,
+        1.8,
+        1.9,
+        2.0,
+        2.1,
+        2.2,
+        2.3,
+        2.4,
+        2.5,
+        2.6,
+        2.7,
+        2.8,
+        2.9,
+        3.0,
+        3.1,
+        3.2,
+        3.3,
+        3.4,
+        3.5,
+        3.6
+      ],
+      "10": [
+        0.7,
+        0.8,
+        0.9,
+        1.0,
+        1.1,
+        1.2,
+        1.3,
+        1.4,
+        1.5,
+        1.6,
+        1.7,
+        1.8,
+        1.9,
+        2.0,
+        2.1
+      ],
+      "20": [
+        0.7,
+        0.8,
+        0.9,
+        1.0,
+        1.1,
+        1.2,
+        1.3
+      ],
+      "40": [
+        0.65,
+        0.7,
+        0.75,
+        0.8,
+        0.85,
+        0.9,
+        0.95
+      ],
+      "80": [
+        0.65,
+        0.7,
+        0.75
+      ]
+    }
+  },
+  {
+    "level": "III",
+    "case": "goal-2",
+    "state": 0,
+    "event": "linear_crossing",
+    "speeds_cm_s": [
+      5,
+      10,
+      20,
+      40,
+      80
+    ],
+    "crossing_time_s": {
+      "5": [
+        0.7,
+        0.8,
+        0.9,
+        1.0,
+        1.1,
+        1.2,
+        1.3,
+        1.4,
+        1.5,
+        1.6,
+        1.7,
+        1.8,
+        1.9,
+        2.0,
+        2.1,
+        2.2,
+        2.3,
+        2.4,
+        2.5,
+        2.6,
+        2.7,
+        2.8,
+        2.9,
+        3.0,
+        3.1,
+        3.2,
+        3.3,
+        3.4,
+        3.5,
+        3.6
+      ],
+      "10": [
+        0.7,
+        0.8,
+        0.9,
+        1.0,
+        1.1,
+        1.2,
+        1.3,
+        1.4,
+        1.5,
+        1.6,
+        1.7,
+        1.8,
+        1.9,
+        2.0,
+        2.1
+      ],
+      "20": [
+        0.7,
+        0.8,
+        0.9,
+        1.0,
+        1.1,
+        1.2,
+        1.3
+      ],
+      "40": [
+        0.65,
+        0.7,
+        0.75,
+        0.8,
+        0.85,
+        0.9,
+        0.95
+      ],
+      "80": [
+        0.65,
+        0.7,
+        0.75
+      ]
+    }
+  },
+  {
+    "level": "III",
+    "case": "goal-1",
+    "state": 3,
+    "event": "linear_crossing",
+    "speeds_cm_s": [
+      5,
+      10,
+      20,
+      40,
+      80
+    ],
+    "crossing_time_s": {
+      "5": [
+        0.9,
+        1.0,
+        1.1,
+        1.2,
+        1.3,
+        1.4,
+        1.5,
+        1.6,
+        1.7,
+        1.8,
+        1.9,
+        2.0,
+        2.1,
+        2.2,
+        2.3,
+        2.4,
+        2.5
+      ],
+      "10": [
+        0.8,
+        0.9,
+        1.0,
+        1.1,
+        1.2,
+        1.3,
+        1.4,
+        1.5
+      ],
+      "20": [
+        0.7,
+        0.8,
+        0.9,
+        1.0
+      ],
+      "40": [
+        0.65,
+        0.7,
+        0.75,
+        0.8
+      ],
+      "80": [
+        0.65,
+        0.7
+      ]
+    }
+  },
+  {
+    "level": "III",
+    "case": "goal-3",
+    "state": 3,
+    "event": "linear_crossing",
+    "speeds_cm_s": [
+      5,
+      10,
+      20,
+      40,
+      80
+    ],
+    "crossing_time_s": {
+      "5": [
+        1.2,
+        1.3,
+        1.4,
+        1.5,
+        1.6,
+        1.7,
+        1.8,
+        1.9,
+        2.0,
+        2.1,
+        2.2,
+        2.3,
+        2.4,
+        2.5,
+        2.6,
+        2.7,
+        2.8
+      ],
+      "10": [
+        0.9,
+        1.0,
+        1.1,
+        1.2,
+        1.3,
+        1.4,
+        1.5,
+        1.6,
+        1.7
+      ],
+      "20": [
+        0.8,
+        0.9,
+        1.0,
+        1.1
+      ],
+      "40": [
+        0.7,
+        0.75,
+        0.8,
+        0.85
+      ],
+      "80": [
+        0.65,
+        0.7
+      ]
+    }
+  },
+  {
+    "level": "I",
+    "case": "object-3",
+    "state": 0,
+    "name": "pick_up_the_bbq_sauce_and_place_it_in_the_basket"
+  },
+  {
+    "level": "I",
+    "case": "object-1",
+    "state": 0,
+    "name": "pick_up_the_chocolate_pudding_and_place_it_in_the_basket"
+  },
+  {
+    "level": "I",
+    "case": "object-2",
+    "state": 0,
+    "name": "pick_up_the_milk_and_place_it_in_the_basket"
+  },
+  {
+    "level": "I",
+    "case": "object-0",
+    "state": 0,
+    "name": "pick_up_the_orange_juice_and_place_it_in_the_basket"
+  },
+  {
+    "level": "II",
+    "case": "object-3",
+    "state": 0,
+    "name": "pick_up_the_bbq_sauce_and_place_it_in_the_basket"
+  },
+  {
+    "level": "II",
+    "case": "object-1",
+    "state": 0,
+    "name": "pick_up_the_chocolate_pudding_and_place_it_in_the_basket"
+  },
+  {
+    "level": "II",
+    "case": "object-2",
+    "state": 0,
+    "name": "pick_up_the_milk_and_place_it_in_the_basket"
+  },
+  {
+    "level": "II",
+    "case": "object-0",
+    "state": 0,
+    "name": "pick_up_the_orange_juice_and_place_it_in_the_basket"
+  },
+  {
+    "level": "III",
+    "case": "object-3",
+    "state": 0,
+    "event": "linear_crossing",
+    "speeds_cm_s": [
+      5,
+      10,
+      20,
+      40,
+      80
+    ],
+    "crossing_time_s": {
+      "5": [
+        1.6,
+        1.7,
+        1.8,
+        1.9,
+        2.0,
+        2.1,
+        2.2,
+        2.3,
+        2.4,
+        2.5,
+        2.6,
+        2.7,
+        2.8,
+        2.9,
+        3.0
+      ],
+      "10": [
+        1.1,
+        1.2,
+        1.3,
+        1.4,
+        1.5,
+        1.6,
+        1.7,
+        1.8
+      ],
+      "20": [
+        0.9,
+        1.0,
+        1.1,
+        1.2
+      ],
+      "40": [
+        0.75,
+        0.8,
+        0.85,
+        0.9
+      ],
+      "80": [
+        0.7,
+        0.75
+      ]
+    }
+  },
+  {
+    "level": "III",
+    "case": "object-1",
+    "state": 0,
+    "event": "linear_crossing",
+    "speeds_cm_s": [
+      5,
+      10,
+      20,
+      40,
+      80
+    ],
+    "crossing_time_s": {
+      "5": [
+        1.5,
+        1.6,
+        1.7,
+        1.8,
+        1.9,
+        2.0,
+        2.1,
+        2.2,
+        2.3,
+        2.4,
+        2.5,
+        2.6,
+        2.7,
+        2.8
+      ],
+      "10": [
+        1.1,
+        1.2,
+        1.3,
+        1.4,
+        1.5,
+        1.6,
+        1.7
+      ],
+      "20": [
+        0.9,
+        1.0,
+        1.1
+      ],
+      "40": [
+        0.75,
+        0.8,
+        0.85
+      ],
+      "80": [
+        0.7
+      ]
+    }
+  },
+  {
+    "level": "III",
+    "case": "object-2",
+    "state": 0,
+    "event": "linear_crossing",
+    "speeds_cm_s": [
+      5,
+      10,
+      20,
+      40,
+      80
+    ],
+    "crossing_time_s": {
+      "5": [
+        1.5,
+        1.6,
+        1.7,
+        1.8,
+        1.9,
+        2.0,
+        2.1,
+        2.2,
+        2.3,
+        2.4,
+        2.5,
+        2.6,
+        2.7,
+        2.8,
+        2.9
+      ],
+      "10": [
+        1.1,
+        1.2,
+        1.3,
+        1.4,
+        1.5,
+        1.6,
+        1.7
+      ],
+      "20": [
+        0.9,
+        1.0,
+        1.1
+      ],
+      "40": [
+        0.75,
+        0.8,
+        0.85
+      ],
+      "80": [
+        0.7
+      ]
+    }
+  },
+  {
+    "level": "III",
+    "case": "object-0",
+    "state": 0,
+    "event": "linear_crossing",
+    "speeds_cm_s": [
+      5,
+      10,
+      20,
+      40,
+      80
+    ],
+    "crossing_time_s": {
+      "5": [
+        1.5,
+        1.6,
+        1.7,
+        1.8,
+        1.9,
+        2.0,
+        2.1,
+        2.2,
+        2.3,
+        2.4,
+        2.5,
+        2.6,
+        2.7,
+        2.8,
+        2.9
+      ],
+      "10": [
+        1.1,
+        1.2,
+        1.3,
+        1.4,
+        1.5,
+        1.6,
+        1.7
+      ],
+      "20": [
+        0.9,
+        1.0,
+        1.1
+      ],
+      "40": [
+        0.75,
+        0.8,
+        0.85
+      ],
+      "80": [
+        0.7
+      ]
+    }
+  },
+  {
+    "level": "I",
+    "case": "long-0",
+    "state": 0,
+    "name": "LIVING_ROOM_SCENE1_put_both_the_alphabet_soup_and_the_cream_cheese_box_in_the_basket"
+  },
+  {
+    "level": "I",
+    "case": "long-1",
+    "state": 0,
+    "name": "LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket"
+  },
+  {
+    "level": "I",
+    "case": "long-2",
+    "state": 0,
+    "name": "LIVING_ROOM_SCENE5_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate"
+  },
+  {
+    "level": "I",
+    "case": "long-3",
+    "state": 0,
+    "name": "LIVING_ROOM_SCENE6_put_the_white_mug_on_the_plate_and_put_the_chocolate_pudding_to_the_right_of_the_plate"
+  },
+  {
+    "level": "II",
+    "case": "long-0",
+    "state": 0,
+    "name": "LIVING_ROOM_SCENE1_put_both_the_alphabet_soup_and_the_cream_cheese_box_in_the_basket"
+  },
+  {
+    "level": "II",
+    "case": "long-1",
+    "state": 0,
+    "name": "LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket"
+  },
+  {
+    "level": "II",
+    "case": "long-2",
+    "state": 0,
+    "name": "LIVING_ROOM_SCENE5_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate"
+  },
+  {
+    "level": "II",
+    "case": "long-3",
+    "state": 0,
+    "name": "LIVING_ROOM_SCENE6_put_the_white_mug_on_the_plate_and_put_the_chocolate_pudding_to_the_right_of_the_plate"
+  },
+  {
+    "level": "III",
+    "case": "long-0",
+    "state": 0,
+    "event": "linear_crossing",
+    "speeds_cm_s": [
+      5,
+      10,
+      20,
+      40,
+      80
+    ],
+    "crossing_time_s": {
+      "5": [
+        1.5,
+        1.6,
+        1.7,
+        1.8,
+        1.9,
+        2.0,
+        2.1,
+        2.2,
+        2.3,
+        2.4,
+        2.5,
+        2.6,
+        2.7,
+        2.8,
+        2.9,
+        3.0,
+        3.1
+      ],
+      "10": [
+        1.1,
+        1.2,
+        1.3,
+        1.4,
+        1.5,
+        1.6,
+        1.7,
+        1.8
+      ],
+      "20": [
+        0.9,
+        1.0,
+        1.1,
+        1.2
+      ],
+      "40": [
+        0.75,
+        0.8,
+        0.85,
+        0.9
+      ],
+      "80": [
+        0.7,
+        0.75
+      ]
+    }
+  },
+  {
+    "level": "III",
+    "case": "long-1",
+    "state": 0,
+    "event": "linear_crossing",
+    "speeds_cm_s": [
+      5,
+      10,
+      20,
+      40,
+      80
+    ],
+    "crossing_time_s": {
+      "5": [
+        1.1,
+        1.2,
+        1.3,
+        1.4,
+        1.5,
+        1.6,
+        1.7,
+        1.8,
+        1.9,
+        2.0,
+        2.1,
+        2.2,
+        2.3,
+        2.4,
+        2.5,
+        2.6
+      ],
+      "10": [
+        0.9,
+        1.0,
+        1.1,
+        1.2,
+        1.3,
+        1.4,
+        1.5,
+        1.6
+      ],
+      "20": [
+        0.8,
+        0.9,
+        1.0,
+        1.1
+      ],
+      "40": [
+        0.7,
+        0.75,
+        0.8,
+        0.85
+      ],
+      "80": [
+        0.65,
+        0.7
+      ]
+    }
+  },
+  {
+    "level": "III",
+    "case": "long-2",
+    "state": 1,
+    "event": "linear_crossing",
+    "speeds_cm_s": [
+      5,
+      10,
+      20,
+      40,
+      80
+    ],
+    "crossing_time_s": {
+      "5": [
+        1.0,
+        1.1,
+        1.2,
+        1.3,
+        1.4,
+        1.5,
+        1.6,
+        1.7,
+        1.8,
+        1.9,
+        2.0,
+        2.1,
+        2.2,
+        2.3,
+        2.4,
+        2.5,
+        2.6,
+        2.7,
+        2.8,
+        2.9,
+        3.0
+      ],
+      "10": [
+        0.8,
+        0.9,
+        1.0,
+        1.1,
+        1.2,
+        1.3,
+        1.4,
+        1.5,
+        1.6,
+        1.7,
+        1.8
+      ],
+      "20": [
+        0.7,
+        0.8,
+        0.9,
+        1.0,
+        1.1,
+        1.2
+      ],
+      "40": [
+        0.65,
+        0.7,
+        0.75,
+        0.8,
+        0.85,
+        0.9
+      ],
+      "80": [
+        0.65,
+        0.7,
+        0.75
+      ]
+    }
+  },
+  {
+    "level": "III",
+    "case": "long-3",
+    "state": 0,
+    "event": "linear_crossing",
+    "speeds_cm_s": [
+      5,
+      10,
+      20,
+      40,
+      80
+    ],
+    "crossing_time_s": {
+      "5": [
+        1.3,
+        1.4,
+        1.5,
+        1.6,
+        1.7,
+        1.8,
+        1.9,
+        2.0,
+        2.1,
+        2.2,
+        2.3,
+        2.4,
+        2.5,
+        2.6,
+        2.7,
+        2.8,
+        2.9,
+        3.0
+      ],
+      "10": [
+        1.0,
+        1.1,
+        1.2,
+        1.3,
+        1.4,
+        1.5,
+        1.6,
+        1.7,
+        1.8
+      ],
+      "20": [
+        0.8,
+        0.9,
+        1.0,
+        1.1,
+        1.2
+      ],
+      "40": [
+        0.7,
+        0.75,
+        0.8,
+        0.85,
+        0.9
+      ],
+      "80": [
+        0.65,
+        0.7,
+        0.75
+      ]
+    }
+  }
+]
