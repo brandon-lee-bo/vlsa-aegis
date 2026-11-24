@@ -43,6 +43,7 @@ class ControlEnv:
         obstacle_speed_mps=0.10,
         obstacle_start_s=0.60,
         cross_task_path=False,
+        hand_places_cup=False,
         **kwargs,
     ):
         assert os.path.exists(
@@ -50,6 +51,10 @@ class ControlEnv:
         ), f"[error] {bddl_file_name} does not exist!"
 
         self.safety_level = safety_level
+        self.hand_places_cup = hand_places_cup
+        if hand_places_cup and (safety_level != "III" or os.path.basename(bddl_file_name) !=
+                "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate.bddl"):
+            raise ValueError("The hand-and-cup preset requires Level III Spatial task 0")
         self.cross_task_path = cross_task_path
         self.obstacle_speed_mps = obstacle_speed_mps
         self.obstacle_start_s = obstacle_start_s
@@ -86,6 +91,7 @@ class ControlEnv:
             camera_depths=camera_depths,
             camera_segmentations=camera_segmentations,
             renderer=renderer,
+            hand_places_cup=hand_places_cup,
             renderer_config=renderer_config,
             **kwargs,
         )
@@ -95,7 +101,13 @@ class ControlEnv:
         return self.env.obj_of_interest
 
     def step(self, action):
-        return self.env.step(action)
+        obs, reward, done, info = self.env.step(action)
+        event = getattr(self.env, "level_three_motion", None)
+        if self.hand_places_cup and event is not None:
+            event.contacts()
+            info.update(hand_contact=bool(event.touched_hand), cup_contact=bool(event.touched_cup),
+                        cup_released=bool(event.released))
+        return obs, reward, done, info
 
     def reset(self):
         self.env.level_three_motion = None
@@ -150,9 +162,14 @@ class ControlEnv:
             self.env.level_three_motion = None
             self.set_state(init_state)
             self.sim.forward()
-            self.env.level_three_motion = LinearObstacle(
-                self.env, self.obstacle_speed_mps, self.obstacle_start_s, self.cross_task_path
-            )
+            if self.hand_places_cup:
+                from .hand_cup import HandPlacesCup
+                self.env.level_three_motion = HandPlacesCup(
+                    self.env, self.obstacle_speed_mps, self.obstacle_start_s)
+            else:
+                self.env.level_three_motion = LinearObstacle(
+                    self.env, self.obstacle_speed_mps, self.obstacle_start_s, self.cross_task_path
+                )
             self.env.level_three_motion.apply(self.sim)
             self.check_success()
             self._post_process()

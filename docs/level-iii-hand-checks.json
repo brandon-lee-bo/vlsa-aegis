@@ -1,0 +1,132 @@
+[
+  {
+    "state": 4,
+    "task": "spatial-0",
+    "speed_mps": 0.1,
+    "release_s": 11.305680524288217,
+    "phase_frames": {
+      "At table edge": 0,
+      "Carry in": 5,
+      "Lower cup": 72,
+      "Release": 114,
+      "Withdraw": 116,
+      "Cup remains": 180
+    },
+    "hand_crossing_frames": [
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77
+    ],
+    "frames": 186,
+    "cup_drop_xyz": [
+      0.15670763592282663,
+      0.08794437237419521,
+      0.9028392119527247
+    ],
+    "cup_final_xyz": [
+      0.15670776131296704,
+      0.08794438087318493,
+      0.9018301049060363
+    ],
+    "cup_drop_error_m": 0.0010091070545145157,
+    "settled_drift_m": 3.499329549638077e-08,
+    "other_object_net_shift_m": {
+      "akita_black_bowl_1": 8.387750426920545e-13,
+      "akita_black_bowl_2": 0.00012121512691775694,
+      "cookies_1": 5.061506769266089e-13,
+      "glazed_rim_porcelain_ramekin_1": 5.446754158811018e-13,
+      "plate_1": 4.829506630041273e-13
+    },
+    "other_object_peak_shift_m": {
+      "akita_black_bowl_1": 8.387750426920545e-13,
+      "akita_black_bowl_2": 0.0006515376043217566,
+      "cookies_1": 5.061506769266089e-13,
+      "glazed_rim_porcelain_ramekin_1": 5.446754158811018e-13,
+      "plate_1": 4.829506630041273e-13
+    },
+    "robot_hand_contact": false,
+    "robot_cup_contact": false
+  },
+  {
+    "state": 4,
+    "task": "spatial-0",
+    "speed_mps": 0.2,
+    "release_s": 5.952840262144109,
+    "phase_frames": {
+      "At table edge": 0,
+      "Carry in": 5,
+      "Lower cup": 38,
+      "Release": 60,
+      "Withdraw": 63,
+      "Cup remains": 95
+    },
+    "hand_crossing_frames": [
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "frames": 100,
+    "cup_drop_xyz": [
+      0.15670763592282663,
+      0.08794437237419521,
+      0.9028392119527247
+    ],
+    "cup_final_xyz": [
+      0.15670776131296704,
+      0.08794438087318493,
+      0.9018301049060363
+    ],
+    "cup_drop_error_m": 0.0010091070545145157,
+    "settled_drift_m": 3.322156083748897e-08,
+    "other_object_net_shift_m": {
+      "akita_black_bowl_1": 8.387750426920545e-13,
+      "akita_black_bowl_2": 0.00016699252751600384,
+      "cookies_1": 5.061506769266089e-13,
+      "glazed_rim_porcelain_ramekin_1": 5.446754158811018e-13,
+      "plate_1": 4.829506630041273e-13
+    },
+    "other_object_peak_shift_m": {
+      "akita_black_bowl_1": 8.387750426920545e-13,
+      "akita_black_bowl_2": 0.0006395747717661347,
+      "cookies_1": 5.061506769266089e-13,
+      "glazed_rim_porcelain_ramekin_1": 5.446754158811018e-13,
+      "plate_1": 4.829506630041273e-13
+    },
+    "robot_hand_contact": false,
+    "robot_cup_contact": false
+  }
+]

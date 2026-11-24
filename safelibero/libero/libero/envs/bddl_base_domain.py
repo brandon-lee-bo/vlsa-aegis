@@ -76,11 +76,13 @@ class BDDLBaseDomain(SingleArmEnv):
         arena_type="table",
         scene_xml="scenes/libero_base_style.xml",
         scene_properties={},
+        hand_places_cup=False,
         **kwargs,
     ):
  
         t0 = time.time()
         # settings for table top (hardcoded since it's not an essential part of the environment)
+        self.hand_places_cup = hand_places_cup
         self.workspace_offset = workspace_offset
         # reward configuration
         self.reward_scale = reward_scale
@@ -405,6 +407,9 @@ class BDDLBaseDomain(SingleArmEnv):
 
         for fixture in self.fixtures:
             self.model.merge_assets(fixture)
+        if self.hand_places_cup:
+            from .hand_cup import add_hand
+            add_hand(self.model, self.objects_dict['red_coffee_mug_obstacle_1'].root_body)
 
     def _setup_placement_initializer(self, mujoco_arena):
         self.placement_initializer = SequentialCompositeSampler(name="ObjectSampler")
