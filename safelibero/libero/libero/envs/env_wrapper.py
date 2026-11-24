@@ -45,6 +45,7 @@ class ControlEnv:
         cross_task_path=False,
         hand_places_cup=False,
         paired_case=None,
+        policy_start_delay_s=.5,
         **kwargs,
     ):
         assert os.path.exists(
@@ -54,9 +55,14 @@ class ControlEnv:
         self.safety_level = safety_level
         self.bddl_file_name = bddl_file_name
         self.paired_case = paired_case
+        if safety_level == "III" and (not np.isfinite(policy_start_delay_s) or policy_start_delay_s < 0):
+            raise ValueError("Level III needs a finite, nonnegative policy start delay")
+        if safety_level == "III" and cross_task_path:
+            raise ValueError("The illustrative crossing preset uses safety_level='III-legacy'")
+        self.policy_start_delay_s = policy_start_delay_s
         self.hand_places_cup = hand_places_cup
-        if hand_places_cup and safety_level != "III":
-            raise ValueError("A moving hand requires Level III")
+        if hand_places_cup and safety_level != "III-legacy":
+            raise ValueError("The moving-hand preview uses safety_level='III-legacy'")
         self.cross_task_path = cross_task_path
         self.obstacle_speed_mps = obstacle_speed_mps
         self.obstacle_start_s = obstacle_start_s
@@ -94,7 +100,7 @@ class ControlEnv:
             camera_segmentations=camera_segmentations,
             renderer=renderer,
             hand_places_cup=hand_places_cup,
-            paired_blocker=safety_level == "II",
+            paired_blocker=safety_level in ("II","III"),
             renderer_config=renderer_config,
             **kwargs,
         )
@@ -110,7 +116,7 @@ class ControlEnv:
             event.contacts()
             info.update(hand_contact=bool(event.touched_hand), cup_contact=bool(event.touched_cup),
                         cup_released=bool(event.released))
-        if self.safety_level == "II" and hasattr(self.sim, "_paired_contact_flags"):
+        if self.safety_level in ("II","III") and hasattr(self.sim, "_paired_contact_flags"):
             info["obstacle_contact"] = self.sim._paired_contact_flags.copy()
         return obs, reward, done, info
 
@@ -167,6 +173,21 @@ class ControlEnv:
             restore_case(self, init_state, self.paired_case)
             start_contact_monitor(self)
         if self.safety_level == "III":
+            from .paired_obstacle import state_key, start_contact_monitor
+            from .timed_crossing import TimedCrossing, lane_checker, timed_cases
+            key = state_key(self.bddl_file_name,init_state)
+            case = self.paired_case if self.paired_case is not None else timed_cases().get(key)
+            if not case or case["key"] != key:
+                raise ValueError(f"No verified timed crossing for {key}")
+            check = lane_checker(self, init_state, case)
+            if not check(np.asarray(case["start"]), np.asarray(case["end"])):
+                raise ValueError("The timed lane lacks clearance in this reset. Use the published reset seed.")
+            event = TimedCrossing(self.sim,case,self.obstacle_speed_mps,
+                                  self.sim.data.time+self.policy_start_delay_s)
+            self.env.level_three_motion = event
+            event.apply(self.sim)
+            start_contact_monitor(self)
+        if self.safety_level == "III-legacy":
             from .level_three import LinearObstacle
             self.env.level_three_motion = None
             self.set_state(init_state)

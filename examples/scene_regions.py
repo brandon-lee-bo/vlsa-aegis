@@ -67,10 +67,9 @@ class SceneRegions:
         return image
 
 
-def paired_preview(env, xyz, case, path):
+def paired_preview(env, xyz, case, path=None, size=448):
     from libero.libero.envs.paired_obstacle import NAME
     from robosuite.utils.camera_utils import get_camera_transform_matrix
-    size = 448
     regions = SceneRegions(env)
     block = mujoco.mj_name2id(env.sim.model._model,mujoco.mjtObj.mjOBJ_GEOM,NAME)
     if block >= 0:
@@ -102,4 +101,6 @@ def paired_preview(env, xyz, case, path):
     if case:
         x,y = project(np.array([case["contact"]]))[0]
         draw.ellipse((x-6,y-6,x+6,y+6),outline="#ffe66e",width=2)
-    image.save(path,quality=92)
+    if path is not None:
+        image.save(path,quality=92)
+    return image

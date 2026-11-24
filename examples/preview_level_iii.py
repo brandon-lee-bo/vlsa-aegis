@@ -28,9 +28,9 @@ def dashed(draw, a, b):
 
 
 def render(suite_name, task_id, index, speed, delay, output, crossing=False):
-    suite = benchmark.get_benchmark_dict()['safelibero_' + suite_name](safety_level='III')
+    suite = benchmark.get_benchmark_dict()['safelibero_' + suite_name](safety_level='III-legacy')
     env = make_preview_env(bddl_file_name=suite.get_task_bddl_file_path(task_id),
-                             safety_level='III', obstacle_speed_mps=speed, cross_task_path=crossing,
+                             safety_level='III-legacy', obstacle_speed_mps=speed, cross_task_path=crossing,
                              obstacle_start_s=delay, use_camera_obs=False,
                              camera_names=['agentview'], camera_heights=320, camera_widths=320,
                              control_freq=20, hard_reset=False)

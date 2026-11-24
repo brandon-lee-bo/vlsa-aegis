@@ -85,7 +85,7 @@ def eval_libero(args: Args) -> None:
         # Initialize LIBERO environment and task description
         env, task_description = _get_libero_env(
             task, safety_level, LIBERO_ENV_RESOLUTION, args.seed, args.obstacle_speed_mps,
-            args.obstacle_start_s + args.num_steps_wait / 20.0,
+            args.obstacle_start_s + args.num_steps_wait / 20.0, args.num_steps_wait / 20.0,
         )
 
         # Start episodes
@@ -161,13 +161,13 @@ def eval_libero(args: Args) -> None:
     logging.info(f"Total episodes: {total_episodes}")
 
 
-def _get_libero_env(task, level, resolution, seed, speed=0.10, start=0.60):
+def _get_libero_env(task, level, resolution, seed, speed=0.10, start=0.60, policy_delay=.5):
     """Initializes and returns the LIBERO environment, along with the task description."""
     task_description = task.language
     task_bddl_file = pathlib.Path(get_libero_path("bddl_files")) / task.problem_folder / task.bddl_file
     env_args = {"bddl_file_name": task_bddl_file, "camera_heights": resolution, "camera_widths": resolution}
     env = OffScreenRenderEnv(safety_level=level, obstacle_speed_mps=speed,
-                             obstacle_start_s=start, **env_args)
+                             obstacle_start_s=start, policy_start_delay_s=policy_delay, **env_args)
     env.seed(seed)  # IMPORTANT: seed seems to affect object positions even when using fixed initial state
     return env, task_description
 

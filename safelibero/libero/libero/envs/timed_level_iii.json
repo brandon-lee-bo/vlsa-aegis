@@ -1,0 +1,1830 @@
+{
+  "reference": "pi05_libero",
+  "control_hz": 20,
+  "cases": {
+    "put_the_bowl_on_the_plate/1c39ce08af0179b0674baa86b4acba896de6c71bec6cfb0a523a83087f728800": {
+      "key": "put_the_bowl_on_the_plate/1c39ce08af0179b0674baa86b4acba896de6c71bec6cfb0a523a83087f728800",
+      "start": [
+        -0.04955374674551476,
+        0.06377882573494051,
+        1.01
+      ],
+      "end": [
+        -0.11565189248317811,
+        0.10884583284704655,
+        1.01
+      ],
+      "center": [
+        -0.07847168550574248,
+        0.0834956413464869,
+        1.01
+      ],
+      "height_m": 0.22,
+      "lead_m": 0.035,
+      "step": 18,
+      "geom": "gripper0_finger2_collision",
+      "contact": [
+        -0.07262464449976846,
+        0.09189644151036064,
+        1.1156203379402503
+      ],
+      "penetration_m": 0.005578796373044481,
+      "first_hits_s": {
+        "0.05": 0.9,
+        "0.1": 0.9,
+        "0.2": 0.9,
+        "0.4": 0.9,
+        "0.8": 0.9
+      },
+      "suite": "goal",
+      "task": 0,
+      "episode": 0
+    },
+    "put_the_bowl_on_the_plate/fc5b15166125f351bc7d0ab8adb090602904e4ea2aa182ee89c9f9759bc03bfe": {
+      "key": "put_the_bowl_on_the_plate/fc5b15166125f351bc7d0ab8adb090602904e4ea2aa182ee89c9f9759bc03bfe",
+      "start": [
+        -0.030014920944078982,
+        0.0659910267388624,
+        1.01
+      ],
+      "end": [
+        -0.07827952002635043,
+        0.12979172011618867,
+        1.01
+      ],
+      "center": [
+        -0.05113068304257274,
+        0.09390383009144264,
+        1.01
+      ],
+      "height_m": 0.22,
+      "lead_m": 0.035,
+      "step": 18,
+      "geom": "gripper0_finger2_collision",
+      "contact": [
+        -0.04612342430914076,
+        0.10222134525829468,
+        1.1137546031113028
+      ],
+      "penetration_m": 0.007959643401457273,
+      "first_hits_s": {
+        "0.05": 0.9,
+        "0.1": 0.9,
+        "0.2": 0.9,
+        "0.4": 0.9,
+        "0.8": 0.9
+      },
+      "suite": "goal",
+      "task": 0,
+      "episode": 1
+    },
+    "put_the_bowl_on_the_plate/29383913d302a942573862c6e62d4b2e35814030708a03edcb1da9f9e7101bad": {
+      "key": "put_the_bowl_on_the_plate/29383913d302a942573862c6e62d4b2e35814030708a03edcb1da9f9e7101bad",
+      "start": [
+        -0.14558927305855093,
+        0.09166925165246902,
+        1.01
+      ],
+      "end": [
+        -0.025716236005650754,
+        0.086150647869444,
+        1.01
+      ],
+      "center": [
+        -0.08565275453210085,
+        0.08890994976095651,
+        1.01
+      ],
+      "height_m": 0.22,
+      "lead_m": 0.06,
+      "step": 68,
+      "geom": "gripper0_hand_collision",
+      "contact": [
+        -0.06516257446228897,
+        0.07862635605704779,
+        1.1150825688598751
+      ],
+      "penetration_m": 0.007003996390520641,
+      "first_hits_s": {
+        "0.05": 3.3,
+        "0.1": 3.35,
+        "0.2": 3.4,
+        "0.4": 3.4,
+        "0.8": 3.4
+      },
+      "suite": "goal",
+      "task": 0,
+      "episode": 2
+    },
+    "put_the_bowl_on_top_of_the_cabinet/a3025a781f8fb543a888dd383067ca2a48574cbde8822a5a2c2df8e18f2e820b": {
+      "key": "put_the_bowl_on_top_of_the_cabinet/a3025a781f8fb543a888dd383067ca2a48574cbde8822a5a2c2df8e18f2e820b",
+      "start": [
+        -0.03397500121891427,
+        -0.058988799955926,
+        1.06
+      ],
+      "end": [
+        -0.11216880611533334,
+        -0.07589231662615617,
+        1.06
+      ],
+      "center": [
+        -0.06818479086109762,
+        -0.0663840884991517,
+        1.06
+      ],
+      "height_m": 0.32,
+      "lead_m": 0.035,
+      "step": 70,
+      "geom": "gripper0_finger1_collision",
+      "contact": [
+        -0.07243513638917419,
+        -0.04509646458494336,
+        1.2147399059495672
+      ],
+      "penetration_m": 0.00626374607116853,
+      "first_hits_s": {
+        "0.05": 3.05,
+        "0.1": 3.2,
+        "0.2": 3.4,
+        "0.4": 3.45,
+        "0.8": 3.5
+      },
+      "suite": "goal",
+      "task": 1,
+      "episode": 0
+    },
+    "put_the_bowl_on_top_of_the_cabinet/cdba55259a8fb24b97c6dd5b660023507bc3f0546e01dcae11fbe33d045511b0": {
+      "key": "put_the_bowl_on_top_of_the_cabinet/cdba55259a8fb24b97c6dd5b660023507bc3f0546e01dcae11fbe33d045511b0",
+      "start": [
+        -0.15753588106902944,
+        0.07691377075314139,
+        1.01
+      ],
+      "end": [
+        -0.09151383761569803,
+        0.12209219235290979,
+        1.01
+      ],
+      "center": [
+        -0.12865123705819695,
+        0.09667933020304006,
+        1.01
+      ],
+      "height_m": 0.22,
+      "lead_m": 0.035,
+      "step": 16,
+      "geom": "gripper0_finger2_collision",
+      "contact": [
+        -0.11168291200653285,
+        0.10536139974420462,
+        1.0974137199331355
+      ],
+      "penetration_m": 0.02886238494902807,
+      "first_hits_s": {
+        "0.05": 0.7,
+        "0.1": 0.7,
+        "0.2": 0.7,
+        "0.4": 0.75,
+        "0.8": 0.8
+      },
+      "suite": "goal",
+      "task": 1,
+      "episode": 1
+    },
+    "put_the_bowl_on_top_of_the_cabinet/51d2460ee855cd02ee07413127cb0c36d4b08bd30b79472ba21eb7d3c09e56d9": {
+      "key": "put_the_bowl_on_top_of_the_cabinet/51d2460ee855cd02ee07413127cb0c36d4b08bd30b79472ba21eb7d3c09e56d9",
+      "start": [
+        -0.12124071103569774,
+        0.1332471452869774,
+        1.01
+      ],
+      "end": [
+        -0.12808174955018975,
+        0.05354018077293236,
+        1.01
+      ],
+      "center": [
+        -0.12423366538578799,
+        0.0983753483120827,
+        1.01
+      ],
+      "height_m": 0.22,
+      "lead_m": 0.035,
+      "step": 16,
+      "geom": "gripper0_finger2_collision",
+      "contact": [
+        -0.10413278471611111,
+        0.09150163909817381,
+        1.1073686569798111
+      ],
+      "penetration_m": 0.014841059307658023,
+      "first_hits_s": {
+        "0.05": 0.75,
+        "0.1": 0.75,
+        "0.2": 0.75,
+        "0.4": 0.8,
+        "0.8": 0.8
+      },
+      "suite": "goal",
+      "task": 1,
+      "episode": 2
+    },
+    "put_the_bowl_on_the_stove/93705ec09d91eedd98b0495104cdd037c7fcb19e1efab982bb921285db6d68a2": {
+      "key": "put_the_bowl_on_the_stove/93705ec09d91eedd98b0495104cdd037c7fcb19e1efab982bb921285db6d68a2",
+      "start": [
+        -0.03329859512528419,
+        0.054179904069502696,
+        1.01
+      ],
+      "end": [
+        -0.11531344142194719,
+        0.11139498063971053,
+        1.01
+      ],
+      "center": [
+        -0.07020527595878254,
+        0.07992668852609622,
+        1.01
+      ],
+      "height_m": 0.22,
+      "lead_m": 0.045,
+      "step": 21,
+      "geom": "gripper0_finger2_collision",
+      "contact": [
+        -0.06291310341209466,
+        0.08803585495647281,
+        1.1150804621805648
+      ],
+      "penetration_m": 0.006269590792759017,
+      "first_hits_s": {
+        "0.05": 1.05,
+        "0.1": 1.05,
+        "0.2": 1.05,
+        "0.4": 1.05,
+        "0.8": 1.05
+      },
+      "suite": "goal",
+      "task": 2,
+      "episode": 0
+    },
+    "put_the_bowl_on_the_stove/732e5b4cb6d471b9ce906dd9e08b971f34f9b585fceca323931a2a3f60a3ec04": {
+      "key": "put_the_bowl_on_the_stove/732e5b4cb6d471b9ce906dd9e08b971f34f9b585fceca323931a2a3f60a3ec04",
+      "start": [
+        -0.016786733987513208,
+        0.055210488337771674,
+        1.01
+      ],
+      "end": [
+        -0.0760576785250375,
+        0.1357521243630581,
+        1.01
+      ],
+      "center": [
+        -0.04345865902939914,
+        0.09145422454915057,
+        1.01
+      ],
+      "height_m": 0.22,
+      "lead_m": 0.045,
+      "step": 21,
+      "geom": "gripper0_finger2_collision",
+      "contact": [
+        -0.03829098105447544,
+        0.09992679376622568,
+        1.114774720268773
+      ],
+      "penetration_m": 0.006665977252366062,
+      "first_hits_s": {
+        "0.05": 1.05,
+        "0.1": 1.05,
+        "0.2": 1.05,
+        "0.4": 1.05,
+        "0.8": 1.05
+      },
+      "suite": "goal",
+      "task": 2,
+      "episode": 1
+    },
+    "put_the_bowl_on_the_stove/9f134c88dbf06c3aad76038a86dfa2b2fdef5eaa1a0ae6a0e78c210a81108c1e": {
+      "key": "put_the_bowl_on_the_stove/9f134c88dbf06c3aad76038a86dfa2b2fdef5eaa1a0ae6a0e78c210a81108c1e",
+      "start": [
+        -0.027146187330261137,
+        0.0538647784170278,
+        1.01
+      ],
+      "end": [
+        -0.010692268208388214,
+        -0.024424866782901837,
+        1.01
+      ],
+      "center": [
+        -0.019947597714441732,
+        0.019613058642058583,
+        1.01
+      ],
+      "height_m": 0.22,
+      "lead_m": 0.035,
+      "step": 36,
+      "geom": "gripper0_finger1_collision",
+      "contact": [
+        -0.017838649728077503,
+        -0.0009920943089067645,
+        1.1049767898363498
+      ],
+      "penetration_m": 0.019316168058163982,
+      "first_hits_s": {
+        "0.05": 1.6,
+        "0.1": 1.7,
+        "0.2": 1.75,
+        "0.4": 1.8,
+        "0.8": 1.8
+      },
+      "suite": "goal",
+      "task": 2,
+      "episode": 2
+    },
+    "open_the_top_drawer_and_put_the_bowl_inside/d408639bc6d49301c1e46ca3ddfbb49ee28588a563b46d2c306b002a95dfbfa7": {
+      "key": "open_the_top_drawer_and_put_the_bowl_inside/d408639bc6d49301c1e46ca3ddfbb49ee28588a563b46d2c306b002a95dfbfa7",
+      "start": [
+        0.09357453390675763,
+        0.08672963807353477,
+        1.01
+      ],
+      "end": [
+        -0.06642546609185482,
+        0.08672897172757639,
+        1.01
+      ],
+      "center": [
+        0.013574533907451412,
+        0.08672930490055558,
+        1.01
+      ],
+      "height_m": 0.22,
+      "lead_m": 0.08,
+      "step": 52,
+      "geom": "gripper0_finger2_collision",
+      "contact": [
+        0.0077748783268466425,
+        0.08400053460020038,
+        1.1035350922467484
+      ],
+      "penetration_m": 0.020972978740920967,
+      "first_hits_s": {
+        "0.05": 2.4,
+        "0.1": 2.4,
+        "0.2": 2.45,
+        "0.4": 2.55,
+        "0.8": 2.6
+      },
+      "suite": "goal",
+      "task": 3,
+      "episode": 0
+    },
+    "open_the_top_drawer_and_put_the_bowl_inside/6bd87891036ff99b2814bf96addb1b5b0e0959a883008a00d2e5cd6ee172970f": {
+      "key": "open_the_top_drawer_and_put_the_bowl_inside/6bd87891036ff99b2814bf96addb1b5b0e0959a883008a00d2e5cd6ee172970f",
+      "start": [
+        -0.15240276582903264,
+        0.16986390722699518,
+        1.01
+      ],
+      "end": [
+        -0.2740679187244412,
+        0.06595245179047049,
+        1.01
+      ],
+      "center": [
+        -0.2132353422767369,
+        0.11790817950873284,
+        1.01
+      ],
+      "height_m": 0.22,
+      "lead_m": 0.08,
+      "step": 176,
+      "geom": "gripper0_hand_collision",
+      "contact": [
+        -0.23323277736912185,
+        0.11029710810690904,
+        1.1080709739298376
+      ],
+      "penetration_m": 0.016378970708929394,
+      "first_hits_s": {
+        "0.05": 8.55,
+        "0.1": 8.65,
+        "0.2": 8.7,
+        "0.4": 8.75,
+        "0.8": 8.8
+      },
+      "suite": "goal",
+      "task": 3,
+      "episode": 1
+    },
+    "open_the_top_drawer_and_put_the_bowl_inside/924ff30965ea7c1b437ae853beb4f5028daa0c52361242664518623a7e2057a7": {
+      "key": "open_the_top_drawer_and_put_the_bowl_inside/924ff30965ea7c1b437ae853beb4f5028daa0c52361242664518623a7e2057a7",
+      "start": [
+        0.12611407350795384,
+        0.08108648436553526,
+        1.01
+      ],
+      "end": [
+        -0.0338853015539529,
+        0.08153367537539372,
+        1.01
+      ],
+      "center": [
+        0.04611438597700047,
+        0.08131007987046449,
+        1.01
+      ],
+      "height_m": 0.22,
+      "lead_m": 0.08,
+      "step": 56,
+      "geom": "gripper0_finger2_collision",
+      "contact": [
+        0.04056276573269442,
+        0.07862048606987126,
+        1.1035408228251775
+      ],
+      "penetration_m": 0.021022849720542025,
+      "first_hits_s": {
+        "0.05": 2.6,
+        "0.1": 2.65,
+        "0.2": 2.7,
+        "0.4": 2.75,
+        "0.8": 2.8
+      },
+      "suite": "goal",
+      "task": 3,
+      "episode": 2
+    },
+    "LIVING_ROOM_SCENE1_put_both_the_alphabet_soup_and_the_cream_cheese_box_in_the_basket/8100b77651e66ba7c24dfcebc0bd54aa8a20e1e3b4f11d9928145e3eac279183": {
+      "key": "LIVING_ROOM_SCENE1_put_both_the_alphabet_soup_and_the_cream_cheese_box_in_the_basket/8100b77651e66ba7c24dfcebc0bd54aa8a20e1e3b4f11d9928145e3eac279183",
+      "start": [
+        -0.0244276963925144,
+        -0.004725620580510731,
+        0.5467600000000001
+      ],
+      "end": [
+        0.05553164526704727,
+        -0.007275852211066102,
+        0.5467600000000001
+      ],
+      "center": [
+        0.010554515583543832,
+        -0.0058413469188787065,
+        0.5467600000000001
+      ],
+      "height_m": 0.22,
+      "lead_m": 0.035,
+      "step": 20,
+      "geom": "gripper0_finger2_collision",
+      "contact": [
+        0.019648828318137256,
+        0.01222481782913071,
+        0.6395085614701987
+      ],
+      "penetration_m": 0.02200837109847052,
+      "first_hits_s": {
+        "0.05": 0.95,
+        "0.1": 0.95,
+        "0.2": 0.95,
+        "0.4": 0.95,
+        "0.8": 1.0
+      },
+      "suite": "long",
+      "task": 0,
+      "episode": 0
+    },
+    "LIVING_ROOM_SCENE1_put_both_the_alphabet_soup_and_the_cream_cheese_box_in_the_basket/687003cb469555c9292c29b084ff58f35a5611473e32bc0e6adf0b6c97e9c10b": {
+      "key": "LIVING_ROOM_SCENE1_put_both_the_alphabet_soup_and_the_cream_cheese_box_in_the_basket/687003cb469555c9292c29b084ff58f35a5611473e32bc0e6adf0b6c97e9c10b",
+      "start": [
+        -0.02099258456870043,
+        -0.011385083511981161,
+        0.5467600000000001
+      ],
+      "end": [
+        0.05076679852461067,
+        0.023978611686165455,
+        0.5467600000000001
+      ],
+      "center": [
+        0.010402145534623182,
+        0.004086533137207984,
+        0.5467600000000001
+      ],
+      "height_m": 0.22,
+      "lead_m": 0.035,
+      "step": 17,
+      "geom": "gripper0_finger2_collision",
+      "contact": [
+        0.020011871631634735,
+        0.025856167285751443,
+        0.6559309103659667
+      ],
+      "penetration_m": 0.0010593379692719106,
+      "first_hits_s": {
+        "0.05": 0.85,
+        "0.1": 0.85,
+        "0.2": 0.85,
+        "0.4": 0.85,
+        "0.8": 0.85
+      },
+      "suite": "long",
+      "task": 0,
+      "episode": 1
+    },
+    "LIVING_ROOM_SCENE1_put_both_the_alphabet_soup_and_the_cream_cheese_box_in_the_basket/0f9f6736598ebd48002bdb8cf6fbe290649e2171e35c4a6bbee85260136ed27f": {
+      "key": "LIVING_ROOM_SCENE1_put_both_the_alphabet_soup_and_the_cream_cheese_box_in_the_basket/0f9f6736598ebd48002bdb8cf6fbe290649e2171e35c4a6bbee85260136ed27f",
+      "start": [
+        0.15134462369082938,
+        0.09271308043982282,
+        0.5467600000000001
+      ],
+      "end": [
+        0.0922865310420606,
+        -0.011748116627267324,
+        0.5467600000000001
+      ],
+      "center": [
+        0.12181557736644498,
+        0.04048248190627775,
+        0.5467600000000001
+      ],
+      "height_m": 0.22,
+      "lead_m": 0.06,
+      "step": 86,
+      "geom": "gripper0_finger2_collision",
+      "contact": [
+        0.14247187862677357,
+        0.05124944107007412,
+        0.6535491676091889
+      ],
+      "penetration_m": 0.0041406629635934375,
+      "first_hits_s": {
+        "0.05": 3.95,
+        "0.1": 4.0,
+        "0.2": 4.05,
+        "0.4": 4.25,
+        "0.8": 4.25
+      },
+      "suite": "long",
+      "task": 0,
+      "episode": 2
+    },
+    "LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket/89ed87053067861a5771c09d790b686e04ee883bb0e5a669d986c9ad14d9b149": {
+      "key": "LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket/89ed87053067861a5771c09d790b686e04ee883bb0e5a669d986c9ad14d9b149",
+      "start": [
+        0.1566793891934311,
+        -0.20909588072499713,
+        0.5467600000000001
+      ],
+      "end": [
+        0.06778218273616929,
+        -0.254892023402028,
+        0.5467600000000001
+      ],
+      "center": [
+        0.11667564628766328,
+        -0.229704144929661,
+        0.5467600000000001
+      ],
+      "height_m": 0.22,
+      "lead_m": 0.045,
+      "step": 75,
+      "geom": "gripper0_finger1_collision",
+      "contact": [
+        0.09429532596244107,
+        -0.22488120963470976,
+        0.6516923592921819
+      ],
+      "penetration_m": 0.006531100964361981,
+      "first_hits_s": {
+        "0.05": 3.6,
+        "0.1": 3.65,
+        "0.2": 3.7,
+        "0.4": 3.75,
+        "0.8": 3.75
+      },
+      "suite": "long",
+      "task": 1,
+      "episode": 0
+    },
+    "LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket/6c742abd255334308e2852bb53e07aadf1ad8e210c4ab1a2e3350324a71d91f7": {
+      "key": "LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket/6c742abd255334308e2852bb53e07aadf1ad8e210c4ab1a2e3350324a71d91f7",
+      "start": [
+        -0.0006893856716703728,
+        -0.011047896140199642,
+        0.5467600000000001
+      ],
+      "end": [
+        -0.006133575956912465,
+        0.06876664383929329,
+        0.5467600000000001
+      ],
+      "center": [
+        -0.003071218921463788,
+        0.023870965100828517,
+        0.5467600000000001
+      ],
+      "height_m": 0.22,
+      "lead_m": 0.035,
+      "step": 16,
+      "geom": "gripper0_finger2_collision",
+      "contact": [
+        0.008736152042268925,
+        0.04402650843717285,
+        0.6538653297752729
+      ],
+      "penetration_m": 0.0037028081884667107,
+      "first_hits_s": {
+        "0.05": 0.7,
+        "0.1": 0.75,
+        "0.2": 0.75,
+        "0.4": 0.8,
+        "0.8": 0.8
+      },
+      "suite": "long",
+      "task": 1,
+      "episode": 1
+    },
+    "LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket/faa8dd0964816a680d6cb510e4ecff9d8591b3d1c7a5cd53824aa1d17114411f": {
+      "key": "LIVING_ROOM_SCENE2_put_both_the_alphabet_soup_and_the_tomato_sauce_in_the_basket/faa8dd0964816a680d6cb510e4ecff9d8591b3d1c7a5cd53824aa1d17114411f",
+      "start": [
+        -0.05922428011799508,
+        0.07803848992561067,
+        0.5467600000000001
+      ],
+      "end": [
+        0.025478404314725978,
+        0.13119350144748765,
+        0.5467600000000001
+      ],
+      "center": [
+        -0.021108072123270608,
+        0.10195824511045531,
+        0.5467600000000001
+      ],
+      "height_m": 0.22,
+      "lead_m": 0.045,
+      "step": 250,
+      "geom": "gripper0_finger2_collision",
+      "contact": [
+        -0.0017021988626004867,
+        0.11150584136953222,
+        0.6558577726025637
+      ],
+      "penetration_m": 0.001154908862256887,
+      "first_hits_s": {
+        "0.05": 12.5,
+        "0.1": 12.5,
+        "0.2": 12.5,
+        "0.4": 12.5,
+        "0.8": 12.5
+      },
+      "suite": "long",
+      "task": 1,
+      "episode": 2
+    },
+    "LIVING_ROOM_SCENE5_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate/e0f44bd5e795ec1dd5a9cdbacea1e93cf92c4046065183426bd599d7af8a9c7a": {
+      "key": "LIVING_ROOM_SCENE5_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate/e0f44bd5e795ec1dd5a9cdbacea1e93cf92c4046065183426bd599d7af8a9c7a",
+      "start": [
+        0.03534143658040558,
+        -0.11849671280910605,
+        0.5467600000000001
+      ],
+      "end": [
+        -0.06674906339667414,
+        -0.24169383052875842,
+        0.5467600000000001
+      ],
+      "center": [
+        -0.01570381340813428,
+        -0.18009527166893224,
+        0.5467600000000001
+      ],
+      "height_m": 0.22,
+      "lead_m": 0.08,
+      "step": 72,
+      "geom": "gripper0_finger1_collision",
+      "contact": [
+        -0.033804247588108835,
+        -0.18451271329765662,
+        0.6321554595414833
+      ],
+      "penetration_m": 0.03000904193606558,
+      "first_hits_s": {
+        "0.05": 3.55,
+        "0.1": 3.6,
+        "0.2": 3.6,
+        "0.4": 3.6,
+        "0.8": 3.6
+      },
+      "suite": "long",
+      "task": 2,
+      "episode": 0
+    },
+    "LIVING_ROOM_SCENE5_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate/684f060d542b8ed0593c6a2256ca85777ef62ed3ee6b0cccdf8d32baf2f674ab": {
+      "key": "LIVING_ROOM_SCENE5_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate/684f060d542b8ed0593c6a2256ca85777ef62ed3ee6b0cccdf8d32baf2f674ab",
+      "start": [
+        -0.021883294506194237,
+        -0.0864295129502752,
+        0.5467600000000001
+      ],
+      "end": [
+        -0.07238615020385972,
+        -0.1727397763398674,
+        0.5467600000000001
+      ],
+      "center": [
+        -0.0446095795701437,
+        -0.12526913147559168,
+        0.5467600000000001
+      ],
+      "height_m": 0.22,
+      "lead_m": 0.045,
+      "step": 30,
+      "geom": "gripper0_hand_collision",
+      "contact": [
+        -0.05459000292127983,
+        -0.14584376160207105,
+        0.6516156111003106
+      ],
+      "penetration_m": 0.007170860533632089,
+      "first_hits_s": {
+        "0.05": 1.45,
+        "0.1": 1.45,
+        "0.2": 1.45,
+        "0.4": 1.45,
+        "0.8": 1.5
+      },
+      "suite": "long",
+      "task": 2,
+      "episode": 1
+    },
+    "LIVING_ROOM_SCENE5_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate/edbbdff363a53753cbbdb2ee86f4d3019da2ffe55265390ab93d79197393e854": {
+      "key": "LIVING_ROOM_SCENE5_put_the_white_mug_on_the_left_plate_and_put_the_yellow_and_white_mug_on_the_right_plate/edbbdff363a53753cbbdb2ee86f4d3019da2ffe55265390ab93d79197393e854",
+      "start": [
+        -0.013472968960103297,
+        -0.11583223701441547,
+        0.5467600000000001
+      ],
+      "end": [
+        -0.06846494520047428,
+        -0.22249001942703867,
+        0.5467600000000001
+      ],
+      "center": [
+        -0.04096895708028878,
+        -0.16916112822072707,
+        0.5467600000000001
+      ],
+      "height_m": 0.22,
+      "lead_m": 0.06,
+      "step": 112,
+      "geom": "gripper0_hand_collision",
+      "contact": [
+        -0.05547761828349366,
+        -0.15058766980960236,
+        0.6547861554049939
+      ],
+      "penetration_m": 0.0027902646686452804,
+      "first_hits_s": {
+        "0.05": 5.5,
+        "0.1": 5.55,
+        "0.2": 5.55,
+        "0.4": 5.6,
+        "0.8": 5.6
+      },
+      "suite": "long",
+      "task": 2,
+      "episode": 2
+    },
+    "LIVING_ROOM_SCENE6_put_the_white_mug_on_the_plate_and_put_the_chocolate_pudding_to_the_right_of_the_plate/2d43b4bbeacc37def2b51c7939a508ac331c587b435c024297d34fae0d8482b1": {
+      "key": "LIVING_ROOM_SCENE6_put_the_white_mug_on_the_plate_and_put_the_chocolate_pudding_to_the_right_of_the_plate/2d43b4bbeacc37def2b51c7939a508ac331c587b435c024297d34fae0d8482b1",
+      "start": [
+        0.047701848245877226,
+        -0.005675641749084845,
+        0.5467600000000001
+      ],
+      "end": [
+        -0.014288340846457807,
+        -0.15317891783574183,
+        0.5467600000000001
+      ],
+      "center": [
+        0.01670675369970971,
+        -0.07942727979241333,
+        0.5467600000000001
+      ],
+      "height_m": 0.22,
+      "lead_m": 0.08,
+      "step": 166,
+      "geom": "gripper0_finger1_collision",
+      "contact": [
+        -0.0016318699025532335,
+        -0.07959265651364228,
+        0.6426903400928367
+      ],
+      "penetration_m": 0.017999218277550133,
+      "first_hits_s": {
+        "0.05": 8.25,
+        "0.1": 8.25,
+        "0.2": 8.3,
+        "0.4": 8.3,
+        "0.8": 8.3
+      },
+      "suite": "long",
+      "task": 3,
+      "episode": 0
+    },
+    "LIVING_ROOM_SCENE6_put_the_white_mug_on_the_plate_and_put_the_chocolate_pudding_to_the_right_of_the_plate/2d6412ce7dd615b81bd27a9b56a705eee64a9048d0aa93a084f6d0e9dd610de6": {
+      "key": "LIVING_ROOM_SCENE6_put_the_white_mug_on_the_plate_and_put_the_chocolate_pudding_to_the_right_of_the_plate/2d6412ce7dd615b81bd27a9b56a705eee64a9048d0aa93a084f6d0e9dd610de6",
+      "start": [
+        -0.011486073225186452,
+        -0.14974943889672612,
+        0.5467600000000001
+      ],
+      "end": [
+        -0.08941215560757051,
+        -0.05849416132587059,
+        0.5467600000000001
+      ],
+      "center": [
+        -0.050449114416378484,
+        -0.10412180011129836,
+        0.5467600000000001
+      ],
+      "height_m": 0.22,
+      "lead_m": 0.06,
+      "step": 38,
+      "geom": "gripper0_hand_collision",
+      "contact": [
+        -0.06881304921066873,
+        -0.1052393778427888,
+        0.6310839682580065
+      ],
+      "penetration_m": 0.019576342934069357,
+      "first_hits_s": {
+        "0.05": 1.25,
+        "0.1": 1.45,
+        "0.2": 1.65,
+        "0.4": 1.8,
+        "0.8": 1.9
+      },
+      "suite": "long",
+      "task": 3,
+      "episode": 1
+    },
+    "LIVING_ROOM_SCENE6_put_the_white_mug_on_the_plate_and_put_the_chocolate_pudding_to_the_right_of_the_plate/0fa5d8c6ac8fe35a2de43b3017aa4c8d8a83ceef8cd3b8705595d61a11a116a3": {
+      "key": "LIVING_ROOM_SCENE6_put_the_white_mug_on_the_plate_and_put_the_chocolate_pudding_to_the_right_of_the_plate/0fa5d8c6ac8fe35a2de43b3017aa4c8d8a83ceef8cd3b8705595d61a11a116a3",
+      "start": [
+        -0.09621011035242863,
+        -0.14756061306594834,
+        0.5467600000000001
+      ],
+      "end": [
+        0.003661307285642783,
+        -0.14249110234380585,
+        0.5467600000000001
+      ],
+      "center": [
+        -0.051267972415296494,
+        -0.14527933324098422,
+        0.5467600000000001
+      ],
+      "height_m": 0.22,
+      "lead_m": 0.045,
+      "step": 21,
+      "geom": "gripper0_finger1_collision",
+      "contact": [
+        -0.05121385705125723,
+        -0.15733248477390585,
+        0.6461381211309233
+      ],
+      "penetration_m": 0.013556299404513639,
+      "first_hits_s": {
+        "0.05": 0.95,
+        "0.1": 0.95,
+        "0.2": 0.95,
+        "0.4": 1.0,
+        "0.8": 1.05
+      },
+      "suite": "long",
+      "task": 3,
+      "episode": 2
+    },
+    "pick_up_the_orange_juice_and_place_it_in_the_basket/d7e5798634e85484e0e4952c1be4c60d4d67621603f67f36902d5137de0f8bf9": {
+      "key": "pick_up_the_orange_juice_and_place_it_in_the_basket/d7e5798634e85484e0e4952c1be4c60d4d67621603f67f36902d5137de0f8bf9",
+      "start": [
+        0.009834491165567609,
+        -0.24065870205987666,
+        0.11
+      ],
+      "end": [
+        0.04374099173471535,
+        -0.12554854082658512,
+        0.11
+      ],
+      "center": [
+        0.02678774145014148,
+        -0.1831036214432309,
+        0.11
+      ],
+      "height_m": 0.22,
+      "lead_m": 0.06,
+      "step": 32,
+      "geom": "gripper0_finger1_collision",
+      "contact": [
+        0.02745212444531301,
+        -0.2055810388012015,
+        0.21362821001727403
+      ],
+      "penetration_m": 0.008113473821458635,
+      "first_hits_s": {
+        "0.05": 1.35,
+        "0.1": 1.35,
+        "0.2": 1.4,
+        "0.4": 1.5,
+        "0.8": 1.55
+      },
+      "suite": "object",
+      "task": 0,
+      "episode": 0
+    },
+    "pick_up_the_orange_juice_and_place_it_in_the_basket/32f020a7e6dbfd3ad7e683afb0ed3f23f5a1048eb667046302126e75a451d545": {
+      "key": "pick_up_the_orange_juice_and_place_it_in_the_basket/32f020a7e6dbfd3ad7e683afb0ed3f23f5a1048eb667046302126e75a451d545",
+      "start": [
+        0.050920126695012606,
+        -0.07301671150347575,
+        0.11
+      ],
+      "end": [
+        0.025304040050585154,
+        -0.1902507343169286,
+        0.11
+      ],
+      "center": [
+        0.03811208337279888,
+        -0.13163372291020217,
+        0.11
+      ],
+      "height_m": 0.22,
+      "lead_m": 0.06,
+      "step": 25,
+      "geom": "gripper0_finger2_collision",
+      "contact": [
+        0.03688336151759241,
+        -0.1080066983274087,
+        0.21843734214806793
+      ],
+      "penetration_m": 0.0019996344637526775,
+      "first_hits_s": {
+        "0.05": 1.25,
+        "0.1": 1.25,
+        "0.2": 1.25,
+        "0.4": 1.25,
+        "0.8": 1.25
+      },
+      "suite": "object",
+      "task": 0,
+      "episode": 1
+    },
+    "pick_up_the_orange_juice_and_place_it_in_the_basket/3bcff6daf2b1b37e4b819b921f7c6680cc15f9fd16bdbd964ec9d4b62db4e332": {
+      "key": "pick_up_the_orange_juice_and_place_it_in_the_basket/3bcff6daf2b1b37e4b819b921f7c6680cc15f9fd16bdbd964ec9d4b62db4e332",
+      "start": [
+        0.03243476535313821,
+        -0.07905276681104725,
+        0.11
+      ],
+      "end": [
+        0.04666655316136511,
+        -0.238418560555444,
+        0.11
+      ],
+      "center": [
+        0.03955065925725166,
+        -0.15873566368324563,
+        0.11
+      ],
+      "height_m": 0.22,
+      "lead_m": 0.08,
+      "step": 64,
+      "geom": "robot0_link7_collision",
+      "contact": [
+        0.05993463613148705,
+        -0.16597557017375292,
+        0.2091474368597232
+      ],
+      "penetration_m": 0.01280254588273224,
+      "first_hits_s": {
+        "0.05": 2.95,
+        "0.1": 3.0,
+        "0.2": 3.1,
+        "0.4": 3.15,
+        "0.8": 3.2
+      },
+      "suite": "object",
+      "task": 0,
+      "episode": 2
+    },
+    "pick_up_the_chocolate_pudding_and_place_it_in_the_basket/92943cc92a7c05581fed064354a0e883ef865bcb1b87ef3f4f9a75b29be848a1": {
+      "key": "pick_up_the_chocolate_pudding_and_place_it_in_the_basket/92943cc92a7c05581fed064354a0e883ef865bcb1b87ef3f4f9a75b29be848a1",
+      "start": [
+        -0.15898323204766984,
+        -0.31015206776647836,
+        0.11
+      ],
+      "end": [
+        0.0010046944783090456,
+        -0.3121176124538298,
+        0.11
+      ],
+      "center": [
+        -0.0789892687846804,
+        -0.3111348401101541,
+        0.11
+      ],
+      "height_m": 0.22,
+      "lead_m": 0.08,
+      "step": 35,
+      "geom": "gripper0_finger1_collision",
+      "contact": [
+        -0.08153952253249283,
+        -0.32014195726916306,
+        0.2149810872126468
+      ],
+      "penetration_m": 0.006404297690486366,
+      "first_hits_s": {
+        "0.05": 1.75,
+        "0.1": 1.75,
+        "0.2": 1.75,
+        "0.4": 1.75,
+        "0.8": 1.75
+      },
+      "suite": "object",
+      "task": 1,
+      "episode": 0
+    },
+    "pick_up_the_chocolate_pudding_and_place_it_in_the_basket/2de5b0aa89ec2184bd0f676896d33dca7d2cc1a4ed7d6b144425838156bfbf88": {
+      "key": "pick_up_the_chocolate_pudding_and_place_it_in_the_basket/2de5b0aa89ec2184bd0f676896d33dca7d2cc1a4ed7d6b144425838156bfbf88",
+      "start": [
+        -0.12437529985563622,
+        -0.3334457906159395,
+        0.11
+      ],
+      "end": [
+        0.0293516331244598,
+        -0.28908330560288964,
+        0.11
+      ],
+      "center": [
+        -0.04751183336558821,
+        -0.31126454810941456,
+        0.11
+      ],
+      "height_m": 0.22,
+      "lead_m": 0.08,
+      "step": 36,
+      "geom": "gripper0_finger1_collision",
+      "contact": [
+        -0.05107717243171703,
+        -0.31847249180309795,
+        0.2172574481639824
+      ],
+      "penetration_m": 0.0035021941345062813,
+      "first_hits_s": {
+        "0.05": 1.8,
+        "0.1": 1.8,
+        "0.2": 1.8,
+        "0.4": 1.8,
+        "0.8": 1.8
+      },
+      "suite": "object",
+      "task": 1,
+      "episode": 1
+    },
+    "pick_up_the_chocolate_pudding_and_place_it_in_the_basket/ff455bb01a569d3c0d74409ec317675ec7d6f2e0388eae549203cef0cbc4ee34": {
+      "key": "pick_up_the_chocolate_pudding_and_place_it_in_the_basket/ff455bb01a569d3c0d74409ec317675ec7d6f2e0388eae549203cef0cbc4ee34",
+      "start": [
+        -0.1517810990030928,
+        -0.3173872422215956,
+        0.11
+      ],
+      "end": [
+        0.007740621130957387,
+        -0.30502517097629983,
+        0.11
+      ],
+      "center": [
+        -0.07202023893606771,
+        -0.3112062065989477,
+        0.11
+      ],
+      "height_m": 0.22,
+      "lead_m": 0.08,
+      "step": 37,
+      "geom": "gripper0_finger1_collision",
+      "contact": [
+        -0.08210859418928503,
+        -0.31840495023021037,
+        0.21490264014196095
+      ],
+      "penetration_m": 0.006500200728049826,
+      "first_hits_s": {
+        "0.05": 1.8,
+        "0.1": 1.8,
+        "0.2": 1.8,
+        "0.4": 1.8,
+        "0.8": 1.85
+      },
+      "suite": "object",
+      "task": 1,
+      "episode": 2
+    },
+    "pick_up_the_milk_and_place_it_in_the_basket/a0064bbd8b175e0da8c59202809eb53bdac20838876a533c726a035c2c467b03": {
+      "key": "pick_up_the_milk_and_place_it_in_the_basket/a0064bbd8b175e0da8c59202809eb53bdac20838876a533c726a035c2c467b03",
+      "start": [
+        -0.1655515103134496,
+        -0.2854437291349038,
+        0.11
+      ],
+      "end": [
+        -0.005552776918396285,
+        -0.2848070879654484,
+        0.11
+      ],
+      "center": [
+        -0.08555214361592295,
+        -0.2851254085501761,
+        0.11
+      ],
+      "height_m": 0.22,
+      "lead_m": 0.08,
+      "step": 136,
+      "geom": "gripper0_hand_collision",
+      "contact": [
+        -0.08257970183661749,
+        -0.26520883942114326,
+        0.2023097603005961
+      ],
+      "penetration_m": 0.02486438323151972,
+      "first_hits_s": {
+        "0.05": 6.55,
+        "0.1": 6.55,
+        "0.2": 6.65,
+        "0.4": 6.7,
+        "0.8": 6.75
+      },
+      "suite": "object",
+      "task": 2,
+      "episode": 0
+    },
+    "pick_up_the_milk_and_place_it_in_the_basket/8d7e36939035b435e0af8bb2ef6e2cfe734d1a6b9c862968b0fa8bf00a50edf0": {
+      "key": "pick_up_the_milk_and_place_it_in_the_basket/8d7e36939035b435e0af8bb2ef6e2cfe734d1a6b9c862968b0fa8bf00a50edf0",
+      "start": [
+        -0.1382789495649856,
+        -0.2924909957181292,
+        0.11
+      ],
+      "end": [
+        0.02165058290438203,
+        -0.28774287565546386,
+        0.11
+      ],
+      "center": [
+        -0.05831418333030179,
+        -0.29011693568679653,
+        0.11
+      ],
+      "height_m": 0.22,
+      "lead_m": 0.08,
+      "step": 36,
+      "geom": "gripper0_finger1_collision",
+      "contact": [
+        -0.057304914275538126,
+        -0.31013569986740025,
+        0.20195965253484577
+      ],
+      "penetration_m": 0.023173106348764995,
+      "first_hits_s": {
+        "0.05": 1.5,
+        "0.1": 1.5,
+        "0.2": 1.6,
+        "0.4": 1.75,
+        "0.8": 1.8
+      },
+      "suite": "object",
+      "task": 2,
+      "episode": 1
+    },
+    "pick_up_the_milk_and_place_it_in_the_basket/e84a6415385c2812ac3f333b0c118240622f284e26dc6e397a4bb9e0ad4e8d0d": {
+      "key": "pick_up_the_milk_and_place_it_in_the_basket/e84a6415385c2812ac3f333b0c118240622f284e26dc6e397a4bb9e0ad4e8d0d",
+      "start": [
+        -0.120522595754438,
+        -0.3095361859710499,
+        0.11
+      ],
+      "end": [
+        0.03613808554350336,
+        -0.27701802281159627,
+        0.11
+      ],
+      "center": [
+        -0.04219225510546732,
+        -0.2932771043913231,
+        0.11
+      ],
+      "height_m": 0.22,
+      "lead_m": 0.08,
+      "step": 48,
+      "geom": "gripper0_finger1_collision",
+      "contact": [
+        -0.044969522558707106,
+        -0.301305417305998,
+        0.21758791352200824
+      ],
+      "penetration_m": 0.0030825882632778967,
+      "first_hits_s": {
+        "0.05": 2.4,
+        "0.1": 2.4,
+        "0.2": 2.4,
+        "0.4": 2.4,
+        "0.8": 2.4
+      },
+      "suite": "object",
+      "task": 2,
+      "episode": 2
+    },
+    "pick_up_the_bbq_sauce_and_place_it_in_the_basket/43db5a71fedcd5c45eead68e96eda1721c39bcfdbda7423eb83e7b5ee9b1b924": {
+      "key": "pick_up_the_bbq_sauce_and_place_it_in_the_basket/43db5a71fedcd5c45eead68e96eda1721c39bcfdbda7423eb83e7b5ee9b1b924",
+      "start": [
+        -0.08127992322192185,
+        -0.033957353239880445,
+        0.11
+      ],
+      "end": [
+        0.017481803804436563,
+        -0.018269100476393157,
+        0.11
+      ],
+      "center": [
+        -0.03683714606006056,
+        -0.026897639496311167,
+        0.11
+      ],
+      "height_m": 0.22,
+      "lead_m": 0.045,
+      "step": 20,
+      "geom": "gripper0_finger2_collision",
+      "contact": [
+        -0.03532947082713734,
+        -0.003437716585409283,
+        0.21776969031422508
+      ],
+      "penetration_m": 0.002854731570967542,
+      "first_hits_s": {
+        "0.05": 0.95,
+        "0.1": 0.95,
+        "0.2": 0.95,
+        "0.4": 0.95,
+        "0.8": 1.0
+      },
+      "suite": "object",
+      "task": 3,
+      "episode": 0
+    },
+    "pick_up_the_bbq_sauce_and_place_it_in_the_basket/b37c5f2a9f159beaf92272dad32be6350a0ca7b107483587a7f1a6fdeb1359a6": {
+      "key": "pick_up_the_bbq_sauce_and_place_it_in_the_basket/b37c5f2a9f159beaf92272dad32be6350a0ca7b107483587a7f1a6fdeb1359a6",
+      "start": [
+        0.06413028095659926,
+        -0.03539408739555031,
+        0.11
+      ],
+      "end": [
+        0.10901593416697095,
+        -0.14668325189901063,
+        0.11
+      ],
+      "center": [
+        0.0865731075617851,
+        -0.09103866964728047,
+        0.11
+      ],
+      "height_m": 0.22,
+      "lead_m": 0.06,
+      "step": 29,
+      "geom": "gripper0_finger2_collision",
+      "contact": [
+        0.08224503197380242,
+        -0.06782117177782956,
+        0.21829841185866855
+      ],
+      "penetration_m": 0.0021796108006673955,
+      "first_hits_s": {
+        "0.05": 1.4,
+        "0.1": 1.4,
+        "0.2": 1.4,
+        "0.4": 1.4,
+        "0.8": 1.4
+      },
+      "suite": "object",
+      "task": 3,
+      "episode": 1
+    },
+    "pick_up_the_bbq_sauce_and_place_it_in_the_basket/28baf5ffea710469184c7a9c2cad7bd5f109ff450e37e38dab6bfa31f7cda273": {
+      "key": "pick_up_the_bbq_sauce_and_place_it_in_the_basket/28baf5ffea710469184c7a9c2cad7bd5f109ff450e37e38dab6bfa31f7cda273",
+      "start": [
+        0.09555627045457273,
+        0.01008860274086476,
+        0.11
+      ],
+      "end": [
+        0.0702925036602343,
+        -0.1479042518044003,
+        0.11
+      ],
+      "center": [
+        0.08292438705740351,
+        -0.06890782453176778,
+        0.11
+      ],
+      "height_m": 0.22,
+      "lead_m": 0.08,
+      "step": 33,
+      "geom": "gripper0_finger2_collision",
+      "contact": [
+        0.09013785721467081,
+        -0.0463717207466732,
+        0.2185366505072752
+      ],
+      "penetration_m": 0.0018715708602932643,
+      "first_hits_s": {
+        "0.05": 1.65,
+        "0.1": 1.65,
+        "0.2": 1.65,
+        "0.4": 1.65,
+        "0.8": 1.65
+      },
+      "suite": "object",
+      "task": 3,
+      "episode": 2
+    },
+    "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/6790d54046359abbea20eda06de6ac102e9c08bc48cf25e5a45c16d818cfe49e": {
+      "key": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/6790d54046359abbea20eda06de6ac102e9c08bc48cf25e5a45c16d818cfe49e",
+      "start": [
+        0.06561389380746582,
+        0.31744937310652677,
+        1.01
+      ],
+      "end": [
+        -0.0922629955103424,
+        0.2914707700006527,
+        1.01
+      ],
+      "center": [
+        -0.013324550851438289,
+        0.30446007155358973,
+        1.01
+      ],
+      "height_m": 0.22,
+      "lead_m": 0.08,
+      "step": 60,
+      "geom": "gripper0_hand_collision",
+      "contact": [
+        -0.027036607814288294,
+        0.3136699201577272,
+        1.0857089168308807
+      ],
+      "penetration_m": 0.048197299366468285,
+      "first_hits_s": {
+        "0.05": 2.15,
+        "0.1": 2.35,
+        "0.2": 2.75,
+        "0.4": 2.9,
+        "0.8": 3.0
+      },
+      "suite": "spatial",
+      "task": 0,
+      "episode": 0
+    },
+    "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/95c5501ca0300ba61acb651ed8fcf90231e9903b6369e299b42fe6b2eecdf24d": {
+      "key": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/95c5501ca0300ba61acb651ed8fcf90231e9903b6369e299b42fe6b2eecdf24d",
+      "start": [
+        -0.00899738378870438,
+        0.1018975164974634,
+        1.01
+      ],
+      "end": [
+        3.3459386110417516e-05,
+        0.022408876607527557,
+        1.01
+      ],
+      "center": [
+        -0.005046389899722906,
+        0.06712123654561647,
+        1.01
+      ],
+      "height_m": 0.22,
+      "lead_m": 0.035,
+      "step": 23,
+      "geom": "gripper0_finger1_collision",
+      "contact": [
+        -0.008238081258790322,
+        0.052123720041676855,
+        1.1156951696868835
+      ],
+      "penetration_m": 0.005504744722372612,
+      "first_hits_s": {
+        "0.05": 1.15,
+        "0.1": 1.15,
+        "0.2": 1.15,
+        "0.4": 1.15,
+        "0.8": 1.15
+      },
+      "suite": "spatial",
+      "task": 0,
+      "episode": 1
+    },
+    "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/cab8950ecf3167a653703d18e03e1e8f9aed9bd4d50c657b7918390d8da693f9": {
+      "key": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate/cab8950ecf3167a653703d18e03e1e8f9aed9bd4d50c657b7918390d8da693f9",
+      "start": [
+        0.2068909710043883,
+        0.13372429835069696,
+        1.01
+      ],
+      "end": [
+        0.1319823480892699,
+        0.27510569109019645,
+        1.01
+      ],
+      "center": [
+        0.1694366595468291,
+        0.20441499472044672,
+        1.01
+      ],
+      "height_m": 0.22,
+      "lead_m": 0.08,
+      "step": 82,
+      "geom": "gripper0_hand_collision",
+      "contact": [
+        0.14629817364909597,
+        0.2033328600421353,
+        1.1161676660796882
+      ],
+      "penetration_m": 0.0053348118987866875,
+      "first_hits_s": {
+        "0.05": 4.1,
+        "0.1": 4.1,
+        "0.2": 4.1,
+        "0.4": 4.1,
+        "0.8": 4.1
+      },
+      "suite": "spatial",
+      "task": 0,
+      "episode": 2
+    },
+    "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate/d657e37f21aed47458082cf9b590f92e0ebb6eb57408b9c0a1505f9cf596536a": {
+      "key": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate/d657e37f21aed47458082cf9b590f92e0ebb6eb57408b9c0a1505f9cf596536a",
+      "start": [
+        -0.1362040995657427,
+        0.10145411810637664,
+        1.01
+      ],
+      "end": [
+        -0.11696300970226686,
+        0.17910577913732723,
+        1.01
+      ],
+      "center": [
+        -0.12778612275047202,
+        0.13542671980741752,
+        1.01
+      ],
+      "height_m": 0.22,
+      "lead_m": 0.035,
+      "step": 16,
+      "geom": "gripper0_finger2_collision",
+      "contact": [
+        -0.1225595319717332,
+        0.15026949650799665,
+        1.1190327523073416
+      ],
+      "penetration_m": 0.0012345532852473529,
+      "first_hits_s": {
+        "0.05": 0.8,
+        "0.1": 0.8,
+        "0.2": 0.8,
+        "0.4": 0.8,
+        "0.8": 0.8
+      },
+      "suite": "spatial",
+      "task": 1,
+      "episode": 0
+    },
+    "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate/a8f005eccd9a745eaab07122f030b71ac19604504885f55d4ec1666adbd891c7": {
+      "key": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate/a8f005eccd9a745eaab07122f030b71ac19604504885f55d4ec1666adbd891c7",
+      "start": [
+        -0.1702230979559494,
+        0.11666359411267244,
+        1.01
+      ],
+      "end": [
+        -0.10204141539740158,
+        0.07481555755794962,
+        1.01
+      ],
+      "center": [
+        -0.14039361183658472,
+        0.0983550781199812,
+        1.01
+      ],
+      "height_m": 0.22,
+      "lead_m": 0.035,
+      "step": 16,
+      "geom": "gripper0_finger1_collision",
+      "contact": [
+        -0.13611869589938788,
+        0.07546516086403594,
+        1.1169162527987653
+      ],
+      "penetration_m": 0.00393713363120625,
+      "first_hits_s": {
+        "0.05": 0.8,
+        "0.1": 0.8,
+        "0.2": 0.8,
+        "0.4": 0.8,
+        "0.8": 0.8
+      },
+      "suite": "spatial",
+      "task": 1,
+      "episode": 1
+    },
+    "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate/f709171ee9aa1790eb5ea030c3162602acb8d1b4f4711fe74bcff3dad2ae66d5": {
+      "key": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate/f709171ee9aa1790eb5ea030c3162602acb8d1b4f4711fe74bcff3dad2ae66d5",
+      "start": [
+        -0.1696798706874035,
+        0.12242419532057869,
+        1.01
+      ],
+      "end": [
+        -0.09153479453792321,
+        0.1395515732165652,
+        1.01
+      ],
+      "center": [
+        -0.13549139987200587,
+        0.1299174231500728,
+        1.01
+      ],
+      "height_m": 0.22,
+      "lead_m": 0.035,
+      "step": 16,
+      "geom": "gripper0_finger2_collision",
+      "contact": [
+        -0.1348752577561465,
+        0.153159655003677,
+        1.1044521230374662
+      ],
+      "penetration_m": 0.0011317931646037975,
+      "first_hits_s": {
+        "0.05": 0.7,
+        "0.1": 0.7,
+        "0.2": 0.7,
+        "0.4": 0.8,
+        "0.8": 0.8
+      },
+      "suite": "spatial",
+      "task": 1,
+      "episode": 2
+    },
+    "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate/035540594a4e6c9b3ad4d63e4e2b72d1a7e3f0d65eb42473aa905e648539d9c7": {
+      "key": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate/035540594a4e6c9b3ad4d63e4e2b72d1a7e3f0d65eb42473aa905e648539d9c7",
+      "start": [
+        -0.01578157315684114,
+        0.03673780203200015,
+        1.01
+      ],
+      "end": [
+        -0.07316097490718236,
+        0.18609510602070017,
+        1.01
+      ],
+      "center": [
+        -0.04447127403201175,
+        0.11141645402635016,
+        1.01
+      ],
+      "height_m": 0.22,
+      "lead_m": 0.08,
+      "step": 82,
+      "geom": "gripper0_finger2_collision",
+      "contact": [
+        -0.0652897333675979,
+        0.12285515671895379,
+        1.1188768439006114
+      ],
+      "penetration_m": 0.001454816002788696,
+      "first_hits_s": {
+        "0.05": 4.1,
+        "0.1": 4.1,
+        "0.2": 4.1,
+        "0.4": 4.1,
+        "0.8": 4.1
+      },
+      "suite": "spatial",
+      "task": 2,
+      "episode": 0
+    },
+    "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate/b117ccbdeefbdf5c5d2366afdf96a32c123161648fa1ee2cf6542e401ee0718b": {
+      "key": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate/b117ccbdeefbdf5c5d2366afdf96a32c123161648fa1ee2cf6542e401ee0718b",
+      "start": [
+        -0.08757944759142709,
+        -0.07328226703330215,
+        1.01
+      ],
+      "end": [
+        -0.16789271188526633,
+        0.01587926939619149,
+        1.01
+      ],
+      "center": [
+        -0.12773607973834672,
+        -0.028701498818555334,
+        1.01
+      ],
+      "height_m": 0.22,
+      "lead_m": 0.06,
+      "step": 94,
+      "geom": "gripper0_hand_collision",
+      "contact": [
+        -0.12962600936063454,
+        -0.007594803426042561,
+        1.1071608446053414
+      ],
+      "penetration_m": 0.018171447542069365,
+      "first_hits_s": {
+        "0.05": 4.45,
+        "0.1": 4.5,
+        "0.2": 4.55,
+        "0.4": 4.65,
+        "0.8": 4.65
+      },
+      "suite": "spatial",
+      "task": 2,
+      "episode": 1
+    },
+    "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate/caa0d24195df20716b780b20d1973b4e7cae8e7574ca47afb87011c5ab678665": {
+      "key": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate/caa0d24195df20716b780b20d1973b4e7cae8e7574ca47afb87011c5ab678665",
+      "start": [
+        -0.001983903299769524,
+        0.06299197339603746,
+        1.01
+      ],
+      "end": [
+        -0.15692612358826008,
+        0.1029032296036898,
+        1.01
+      ],
+      "center": [
+        -0.0794550134440148,
+        0.08294760149986363,
+        1.01
+      ],
+      "height_m": 0.22,
+      "lead_m": 0.08,
+      "step": 86,
+      "geom": "gripper0_finger2_collision",
+      "contact": [
+        -0.0760575594364586,
+        0.07515180554515846,
+        1.1164809249670107
+      ],
+      "penetration_m": 0.004493715170983847,
+      "first_hits_s": {
+        "0.05": 4.2,
+        "0.1": 4.2,
+        "0.2": 4.25,
+        "0.4": 4.25,
+        "0.8": 4.3
+      },
+      "suite": "spatial",
+      "task": 2,
+      "episode": 2
+    },
+    "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate/b2e67f0555e354e57740550d5067dd30c477d905a7ec019c02f90521eb6415f1": {
+      "key": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate/b2e67f0555e354e57740550d5067dd30c477d905a7ec019c02f90521eb6415f1",
+      "start": [
+        0.12400175057578026,
+        0.10383063706862139,
+        1.06
+      ],
+      "end": [
+        -0.03506940899870527,
+        0.12104592654131277,
+        1.06
+      ],
+      "center": [
+        0.0444661707885375,
+        0.11243828180496708,
+        1.06
+      ],
+      "height_m": 0.32,
+      "lead_m": 0.08,
+      "step": 96,
+      "geom": "gripper0_finger1_collision",
+      "contact": [
+        0.04981171432697166,
+        0.10945363417458695,
+        1.2186101214503362
+      ],
+      "penetration_m": 0.0016656544051383282,
+      "first_hits_s": {
+        "0.05": 4.8,
+        "0.1": 4.8,
+        "0.2": 4.8,
+        "0.4": 4.8,
+        "0.8": 4.8
+      },
+      "suite": "spatial",
+      "task": 3,
+      "episode": 0
+    },
+    "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate/ac1c76124c1467353e1ec4295030293020fc1a84a628f1b85b886f64b3fcb503": {
+      "key": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate/ac1c76124c1467353e1ec4295030293020fc1a84a628f1b85b886f64b3fcb503",
+      "start": [
+        0.19203838950632238,
+        0.1996835416561095,
+        1.01
+      ],
+      "end": [
+        0.11682215428783874,
+        0.10618210872827819,
+        1.01
+      ],
+      "center": [
+        0.15443027189708056,
+        0.15293282519219384,
+        1.01
+      ],
+      "height_m": 0.22,
+      "lead_m": 0.06,
+      "step": 197,
+      "geom": "gripper0_finger1_collision",
+      "contact": [
+        0.14751921158621314,
+        0.13790786520377202,
+        1.1155418715445566
+      ],
+      "penetration_m": 0.005695696146231555,
+      "first_hits_s": {
+        "0.05": 9.85,
+        "0.1": 9.85,
+        "0.2": 9.85,
+        "0.4": 9.85,
+        "0.8": 9.85
+      },
+      "suite": "spatial",
+      "task": 3,
+      "episode": 1
+    },
+    "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate/01399ed70c838b992083d4511b89c713ba1f28608f3436f368fbbdf6d9207e03": {
+      "key": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate/01399ed70c838b992083d4511b89c713ba1f28608f3436f368fbbdf6d9207e03",
+      "start": [
+        -0.011001588731415844,
+        0.14763191065273026,
+        1.06
+      ],
+      "end": [
+        0.04174727616822162,
+        0.08748577817690274,
+        1.06
+      ],
+      "center": [
+        0.012076039662175547,
+        0.12131797769455573,
+        1.06
+      ],
+      "height_m": 0.32,
+      "lead_m": 0.035,
+      "step": 96,
+      "geom": "gripper0_finger1_collision",
+      "contact": [
+        0.03393562583031406,
+        0.11810713235075457,
+        1.2081116275527257
+      ],
+      "penetration_m": 0.01433930415088208,
+      "first_hits_s": {
+        "0.05": 4.75,
+        "0.1": 4.75,
+        "0.2": 4.75,
+        "0.4": 4.8,
+        "0.8": 4.8
+      },
+      "suite": "spatial",
+      "task": 3,
+      "episode": 2
+    }
+  }
+}

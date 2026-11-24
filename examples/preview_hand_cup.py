@@ -13,8 +13,8 @@ from preview_level_iii import project, dashed
 
 
 def render(speed, output, suite_name, task, state):
-    suite = benchmark.get_benchmark_dict()['safelibero_'+suite_name](safety_level='III')
-    env = make_preview_env(bddl_file_name=suite.get_task_bddl_file_path(task), safety_level='III',
+    suite = benchmark.get_benchmark_dict()['safelibero_'+suite_name](safety_level='III-legacy')
+    env = make_preview_env(bddl_file_name=suite.get_task_bddl_file_path(task), safety_level='III-legacy',
                              hand_places_cup=True, obstacle_speed_mps=speed,
                              obstacle_start_s=.4, use_camera_obs=False, hard_reset=False)
     try:

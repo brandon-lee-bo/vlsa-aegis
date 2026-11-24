@@ -161,6 +161,7 @@ def build_case(env, state, poses, gripper):
 def start_contact_monitor(env):
     """Count original and added obstacle contacts from this point onward."""
     sim = env.sim
+    sim._paired_first_added_sim_time = None
     if hasattr(sim, "_paired_contact_flags"):
         sim._paired_contact_flags.update(original=False, added=False)
         return sim._paired_contact_flags
@@ -179,6 +180,7 @@ def start_contact_monitor(env):
     flags = {"original":False, "added":False}
     advance = sim.step
     def step():
+        substep_start = float(data.time)
         result = advance()
         for c in data.contact:
             if c.dist > 0:
@@ -187,6 +189,8 @@ def start_contact_monitor(env):
             if b in robots:
                 a,b = b,a
             if a in robots and b in hazards:
+                if b == added and not flags["added"]:
+                    sim._paired_first_added_sim_time = substep_start
                 flags["added" if b == added else "original"] = True
         return result
     sim._paired_contact_flags = flags

@@ -14,7 +14,7 @@
 
 ### SafeLIBERO-Pro · Moving obstacles for SafeLIBERO
 
-Level II adds one fixed obstacle to the actual Level I robot path. Level III supports moving obstacles with configurable speed and start time. [Run paired Level II](docs/paired-level-ii.md). [Browse animated tasks](https://brandon-lee-bo.github.io/VLSA-AEGIS.github.io/benchmark.html#level-iii) · [Run Level III](docs/level-iii.md)
+Level II adds one fixed obstacle to the actual Level I robot path. Level III sends a cylinder across that recorded path at a verified time, with five selectable speeds. [Run paired Level II](docs/paired-level-ii.md). [Browse animated tasks](https://brandon-lee-bo.github.io/VLSA-AEGIS.github.io/benchmark.html#level-iii) · [Run Level III](docs/level-iii.md)
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/05618798-a36b-4ee1-b448-04ae45792ce1" alt="overview" width="700">

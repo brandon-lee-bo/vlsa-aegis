@@ -1,0 +1,5 @@
+suite,task,episode,speed_cm_s,hold_s,normal_sr,hold_sr,normal_ssr,hold_ssr,normal_added,hold_added
+goal,0,0,10,1.4,0,0,0,0,1,0
+goal,2,0,10,1.65,0,0,0,0,1,0
+goal,3,0,10,3.45,1,0,0,0,1,1
+long,3,2,10,1.65,0,0,0,0,1,1

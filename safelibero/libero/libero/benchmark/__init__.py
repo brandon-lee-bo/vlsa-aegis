@@ -140,18 +140,19 @@ class Benchmark(abc.ABC):
             self.tasks[i].init_states_file
         )
 
-        base_level = {"II": "I", "III": "I", "II-legacy": "II"}.get(self.safety_level, self.safety_level)
+        base_level = {"II": "I", "III": "I", "III-legacy": "I", "II-legacy": "II"}.get(self.safety_level, self.safety_level)
         init_states_path = init_states_path.replace(".pruned_init", f"_level_{base_level}.pruned_init")
 
 
         init_states = torch.load(init_states_path)
-        if self.safety_level == "II":
+        if self.safety_level in ("II","III"):
             from libero.libero.envs.paired_obstacle import frozen_cases, state_key
             task = self.get_task_bddl_file_path(i)
-            cases = frozen_cases()
+            from libero.libero.envs.timed_crossing import timed_cases
+            cases = frozen_cases() if self.safety_level=="II" else timed_cases()
             selected = [idx for idx, state in enumerate(init_states) if state_key(task, state) in cases]
             if not selected:
-                raise ValueError(f"No published paired Level II states for {task}")
+                raise ValueError(f"No published paired Level {self.safety_level} states for {task}")
             if isinstance(init_states, (list, tuple)):
                 return type(init_states)(init_states[j] for j in selected)
             return init_states[selected]

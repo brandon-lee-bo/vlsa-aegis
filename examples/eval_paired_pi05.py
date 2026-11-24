@@ -25,7 +25,7 @@ def reset_seed(seed):
     torch.manual_seed(seed)
 
 
-def rollout(env, state, prompt, policy, limit, seed):
+def rollout(env, state, prompt, policy, limit, seed, pause_steps=0):
     env.seed(seed)
     obs = env.set_init_state(state)
     for _ in range(10):
@@ -35,8 +35,10 @@ def rollout(env, state, prompt, policy, limit, seed):
     hit = start_contact_monitor(env)
     queue = deque()
     qpos,xyz = [env.sim.data.qpos.copy()], [obs["robot0_eef_pos"].copy()]
-    for _ in range(limit):
-        if not queue:
+    for step in range(limit):
+        if step < pause_steps:
+            queue.append(np.array([0., 0., 0., 0., 0., 0., -1.]))
+        elif not queue:
             def image(key):
                 return image_tools.convert_to_uint8(image_tools.resize_with_pad(
                     np.ascontiguousarray(obs[key][::-1,::-1]),224,224))
