@@ -12,6 +12,10 @@
 [![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-SafeLIBERO-FFD21E.svg)](https://huggingface.co/datasets/THURCSCT/SafeLIBERO)
 </h5> 
 
+### R³ extension · SafeLIBERO Level III
+
+Moving obstacles for all 16 tasks, with configurable speed and start time. [Browse animated tasks](https://brandon-lee-bo.github.io/VLSA-AEGIS.github.io/benchmark.html#level-iii) · [Run Level III](docs/level-iii.md)
+
 <p align="center">
   <img src="https://github.com/user-attachments/assets/05618798-a36b-4ee1-b448-04ae45792ce1" alt="overview" width="700">
 </p>  

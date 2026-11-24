@@ -39,11 +39,18 @@ class ControlEnv:
         camera_segmentations=None,
         renderer="mujoco",
         renderer_config=None,
+        safety_level="I",
+        obstacle_speed_mps=0.10,
+        obstacle_start_s=0.60,
         **kwargs,
     ):
         assert os.path.exists(
             bddl_file_name
         ), f"[error] {bddl_file_name} does not exist!"
+
+        self.safety_level = safety_level
+        self.obstacle_speed_mps = obstacle_speed_mps
+        self.obstacle_start_s = obstacle_start_s
 
         controller_configs = suite.load_controller_config(default_controller=controller)
 
@@ -89,6 +96,7 @@ class ControlEnv:
         return self.env.step(action)
 
     def reset(self):
+        self.env.level_three_motion = None
         success = False
         while not success:
             try:
@@ -135,6 +143,19 @@ class ControlEnv:
         self.env.seed(seed)
 
     def set_init_state(self, init_state):
+        if self.safety_level == "III":
+            from .level_three import LinearObstacle
+            self.env.level_three_motion = None
+            self.set_state(init_state)
+            self.sim.forward()
+            self.env.level_three_motion = LinearObstacle(
+                self.env, self.obstacle_speed_mps, self.obstacle_start_s
+            )
+            self.env.level_three_motion.apply(self.sim)
+            self.check_success()
+            self._post_process()
+            self._update_observables(force=True)
+            return self.env._get_observations()
         return self.regenerate_obs_from_state(init_state)
 
     def regenerate_obs_from_state(self, mujoco_state):

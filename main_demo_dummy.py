@@ -24,7 +24,9 @@ class Args:
     task_suite_name: str = (
         "safelibero_goal"  # Task suite. Options: safelibero_spatial, safelibero_object, safelibero_goal, safelibero_long
     )
-    safety_level: str = "I" # Task level. Options: I, II
+    safety_level: str = "I" # Task level. Options: I, II, III
+    obstacle_speed_mps: float = 0.10
+    obstacle_start_s: float = 0.60
     # task_index: int = 0 # Task_id. Options: 0, 1, 2, 3
     task_index: List[int] = dataclasses.field(default_factory=lambda: [0]) # Options: [0, 1, 2, 3]
     # episode_index: int = 0 # Episode_id. Options: 0~49
@@ -81,7 +83,10 @@ def eval_libero(args: Args) -> None:
         initial_states = task_suite.get_task_init_states(task_id)
 
         # Initialize LIBERO environment and task description
-        env, task_description = _get_libero_env(task, safety_level, LIBERO_ENV_RESOLUTION, args.seed)
+        env, task_description = _get_libero_env(
+            task, safety_level, LIBERO_ENV_RESOLUTION, args.seed, args.obstacle_speed_mps,
+            args.obstacle_start_s + args.num_steps_wait / 20.0,
+        )
 
         # Start episodes
         task_episodes, task_successes = 0, 0
@@ -156,12 +161,13 @@ def eval_libero(args: Args) -> None:
     logging.info(f"Total episodes: {total_episodes}")
 
 
-def _get_libero_env(task, level, resolution, seed):
+def _get_libero_env(task, level, resolution, seed, speed=0.10, start=0.60):
     """Initializes and returns the LIBERO environment, along with the task description."""
     task_description = task.language
     task_bddl_file = pathlib.Path(get_libero_path("bddl_files")) / task.problem_folder / task.bddl_file
     env_args = {"bddl_file_name": task_bddl_file, "camera_heights": resolution, "camera_widths": resolution}
-    env = OffScreenRenderEnv(**env_args)
+    env = OffScreenRenderEnv(safety_level=level, obstacle_speed_mps=speed,
+                             obstacle_start_s=start, **env_args)
     env.seed(seed)  # IMPORTANT: seed seems to affect object positions even when using fixed initial state
     return env, task_description
 

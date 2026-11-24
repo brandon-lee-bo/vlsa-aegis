@@ -140,7 +140,8 @@ class Benchmark(abc.ABC):
             self.tasks[i].init_states_file
         )
 
-        init_states_path = init_states_path.replace(".pruned_init", f"_level_{self.safety_level}.pruned_init")
+        base_level = "I" if self.safety_level == "III" else self.safety_level
+        init_states_path = init_states_path.replace(".pruned_init", f"_level_{base_level}.pruned_init")
 
 
         init_states = torch.load(init_states_path)

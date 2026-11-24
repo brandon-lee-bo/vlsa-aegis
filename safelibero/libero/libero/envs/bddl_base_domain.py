@@ -823,6 +823,9 @@ class BDDLBaseDomain(SingleArmEnv):
         return obs, reward, done, info
 
     def _pre_action(self, action, policy_step=False):
+        motion = getattr(self, "level_three_motion", None)
+        if motion is not None:
+            motion.apply(self.sim)
         super()._pre_action(action, policy_step=policy_step)
 
     def _post_action(self, action):
