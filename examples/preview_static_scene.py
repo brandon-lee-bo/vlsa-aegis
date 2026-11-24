@@ -91,9 +91,11 @@ def draw_route(image, uv, hit):
 
 
 def render(suite, level, task, out):
-    suite_obj = benchmark.get_benchmark_dict()['safelibero_'+suite](safety_level=level)
+    # This historical preview selects from the original VLSA static scenes.
+    original_level = "II-legacy" if level == "II" else level
+    suite_obj = benchmark.get_benchmark_dict()['safelibero_'+suite](safety_level=original_level)
     env = make_preview_env(bddl_file_name=suite_obj.get_task_bddl_file_path(task),
-                           safety_level=level, use_camera_obs=False, hard_reset=False)
+                           safety_level=original_level, use_camera_obs=False, hard_reset=False)
     try:
         env.seed(13)
         env.reset()

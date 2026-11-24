@@ -65,3 +65,41 @@ class SceneRegions:
             draw.rectangle((x,12,x+6,18),fill=c)
             draw.text((x+11,9),label,fill='white')
         return image
+
+
+def paired_preview(env, xyz, case, path):
+    from libero.libero.envs.paired_obstacle import NAME
+    from robosuite.utils.camera_utils import get_camera_transform_matrix
+    size = 448
+    regions = SceneRegions(env)
+    block = mujoco.mj_name2id(env.sim.model._model,mujoco.mjtObj.mjOBJ_GEOM,NAME)
+    if block >= 0:
+        regions.roles[block] = 2
+    image = regions.frame(size)
+    camera = get_camera_transform_matrix(env.sim,"agentview",size,size)
+    def project(points):
+        pix = (camera @ np.c_[points,np.ones(len(points))].T).T
+        return pix[:,:2] / pix[:,2,None]
+    draw = ImageDraw.Draw(image)
+    pixels = project(xyz)
+    remaining = 6.
+    paint = True
+    for a,b in zip(pixels,pixels[1:]):
+        direction = b-a
+        length = np.linalg.norm(direction)
+        if length < .001:
+            continue
+        direction /= length
+        while length > 1e-6:
+            delta = min(remaining,length)
+            end = a + delta*direction
+            if paint:
+                draw.line([tuple(a),tuple(end)],fill="#ffdb46",width=2)
+            a, length, remaining = end, length-delta, remaining-delta
+            if remaining < 1e-6:
+                paint = not paint
+                remaining = 6. if paint else 3.
+    if case:
+        x,y = project(np.array([case["contact"]]))[0]
+        draw.ellipse((x-6,y-6,x+6,y+6),outline="#ffe66e",width=2)
+    image.save(path,quality=92)

@@ -94,7 +94,7 @@ class Benchmark(abc.ABC):
         tasks = list(task_maps[self.name].values())
         print(f"[info] using task orders {task_orders[self.task_order_index]}")
         task_order = task_orders[self.task_order_index]
-        if self.name == "safelibero_goal" and self.safety_level == "II":
+        if self.name == "safelibero_goal" and self.safety_level == "II-legacy":
             task_order = [4 if i == 3 else i for i in task_order]        
         self.tasks = [tasks[i] for i in task_order]
         self.n_tasks = len(self.tasks)
@@ -140,11 +140,21 @@ class Benchmark(abc.ABC):
             self.tasks[i].init_states_file
         )
 
-        base_level = "I" if self.safety_level == "III" else self.safety_level
+        base_level = {"II": "I", "III": "I", "II-legacy": "II"}.get(self.safety_level, self.safety_level)
         init_states_path = init_states_path.replace(".pruned_init", f"_level_{base_level}.pruned_init")
 
 
         init_states = torch.load(init_states_path)
+        if self.safety_level == "II":
+            from libero.libero.envs.paired_obstacle import frozen_cases, state_key
+            task = self.get_task_bddl_file_path(i)
+            cases = frozen_cases()
+            selected = [idx for idx, state in enumerate(init_states) if state_key(task, state) in cases]
+            if not selected:
+                raise ValueError(f"No published paired Level II states for {task}")
+            if isinstance(init_states, (list, tuple)):
+                return type(init_states)(init_states[j] for j in selected)
+            return init_states[selected]
         
         return init_states
 

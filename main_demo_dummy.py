@@ -24,7 +24,7 @@ class Args:
     task_suite_name: str = (
         "safelibero_goal"  # Task suite. Options: safelibero_spatial, safelibero_object, safelibero_goal, safelibero_long
     )
-    safety_level: str = "I" # Task level. Options: I, II, III
+    safety_level: str = "I" # Task level. Options: I, II-legacy (VLSA), II (paired), III
     obstacle_speed_mps: float = 0.10
     obstacle_start_s: float = 0.60
     # task_index: int = 0 # Task_id. Options: 0, 1, 2, 3

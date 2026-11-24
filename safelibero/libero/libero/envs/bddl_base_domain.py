@@ -77,12 +77,14 @@ class BDDLBaseDomain(SingleArmEnv):
         scene_xml="scenes/libero_base_style.xml",
         scene_properties={},
         hand_places_cup=False,
+        paired_blocker=False,
         **kwargs,
     ):
  
         t0 = time.time()
         # settings for table top (hardcoded since it's not an essential part of the environment)
         self.hand_places_cup = hand_places_cup
+        self.paired_blocker = paired_blocker
         self.workspace_offset = workspace_offset
         # reward configuration
         self.reward_scale = reward_scale
@@ -407,6 +409,9 @@ class BDDLBaseDomain(SingleArmEnv):
 
         for fixture in self.fixtures:
             self.model.merge_assets(fixture)
+        if self.paired_blocker:
+            from .paired_obstacle import add_blocker
+            add_blocker(self.model)
         if self.hand_places_cup:
             from .hand_cup import add_hand
             add_hand(self.model, self.objects_dict['red_coffee_mug_obstacle_1'].root_body)

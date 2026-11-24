@@ -44,6 +44,7 @@ class ControlEnv:
         obstacle_start_s=0.60,
         cross_task_path=False,
         hand_places_cup=False,
+        paired_case=None,
         **kwargs,
     ):
         assert os.path.exists(
@@ -51,6 +52,8 @@ class ControlEnv:
         ), f"[error] {bddl_file_name} does not exist!"
 
         self.safety_level = safety_level
+        self.bddl_file_name = bddl_file_name
+        self.paired_case = paired_case
         self.hand_places_cup = hand_places_cup
         if hand_places_cup and safety_level != "III":
             raise ValueError("A moving hand requires Level III")
@@ -91,6 +94,7 @@ class ControlEnv:
             camera_segmentations=camera_segmentations,
             renderer=renderer,
             hand_places_cup=hand_places_cup,
+            paired_blocker=safety_level == "II",
             renderer_config=renderer_config,
             **kwargs,
         )
@@ -106,6 +110,8 @@ class ControlEnv:
             event.contacts()
             info.update(hand_contact=bool(event.touched_hand), cup_contact=bool(event.touched_cup),
                         cup_released=bool(event.released))
+        if self.safety_level == "II" and hasattr(self.sim, "_paired_contact_flags"):
+            info["obstacle_contact"] = self.sim._paired_contact_flags.copy()
         return obs, reward, done, info
 
     def reset(self):
@@ -156,6 +162,10 @@ class ControlEnv:
         self.env.seed(seed)
 
     def set_init_state(self, init_state):
+        if self.safety_level == "II":
+            from .paired_obstacle import restore_case, start_contact_monitor
+            restore_case(self, init_state, self.paired_case)
+            start_contact_monitor(self)
         if self.safety_level == "III":
             from .level_three import LinearObstacle
             self.env.level_three_motion = None

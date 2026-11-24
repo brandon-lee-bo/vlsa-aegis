@@ -47,7 +47,7 @@ class Args:
     task_suite_name: str = (
         "safelibero_spatial"  # Task suite. Options: libero_spatial, libero_object, libero_goal, libero_10, libero_90
     )
-    safety_level: str = "II" # Task level. Options: I, II, III
+    safety_level: str = "II-legacy" # Task level. Options: I, II-legacy (VLSA), II (paired), III
     obstacle_speed_mps: float = 0.10
     obstacle_start_s: float = 0.60
     task_index: List[int] = dataclasses.field(default_factory=lambda: [0]) # Options: [0, 1, 2, 3]
@@ -369,7 +369,11 @@ def eval_libero(args: Args) -> None:
 
                     
                     # print("t={}, safety layer time={}".format(t, t4-t3))
-                    if collide_flag == False:
+                    if safety_level == "II":
+                        if not collide_flag and any(info["obstacle_contact"].values()):
+                            collide_flag = True
+                            collide_time = t
+                    elif collide_flag == False:
                         then_obstacle_pos = obs[obstacle_name + "_pos"]
                         # print(np.sum(np.abs(then_obstacle_pos - initial_obstacle_pos)))
                         if np.sum(np.abs(then_obstacle_pos - initial_obstacle_pos)) > 0.001:
