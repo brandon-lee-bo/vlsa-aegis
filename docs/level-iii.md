@@ -1,4 +1,4 @@
-# SafeLIBERO Level III · Moving obstacles
+# SafeLIBERO-Pro · Level III moving obstacles
 
 This R³ extension starts from SafeLIBERO Level I. Each of the 16 tasks keeps its instruction, goal predicate and 50 supplied initial states. In the linear event, one existing obstacle is placed on a reproducible 16 cm lane on the workspace surface. It waits, travels in a straight line and stops. The lane is determined at initialization and is independent of the policy and obstacle speed.
 
